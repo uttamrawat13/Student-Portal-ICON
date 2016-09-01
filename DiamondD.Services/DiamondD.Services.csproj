@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C21D24C-628C-4F77-B5BE-42E84C3BA124}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DiamondD.Services</RootNamespace>
+    <AssemblyName>DiamondD.Services</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/DiamondD.Services/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attendance\AttendanceService.cs" />
+    <Compile Include="Attendance\IAttendanceService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CommonService.cs" />
+    <Compile Include="Common\ErrorMessage.cs" />
+    <Compile Include="Common\ICommonService.cs" />
+    <Compile Include="Common\ILogService.cs" />
+    <Compile Include="Common\LogService.cs" />
+    <Compile Include="Common\sendmail.cs" />
+    <Compile Include="CosmetologyGradeBook\CosmetologyGradeBookService.cs" />
+    <Compile Include="CosmetologyGradeBook\ICosmetologyGradeBookService.cs" />
+    <Compile Include="Enrollment\EnrollmentService.cs" />
+    <Compile Include="Enrollment\IEnrollmentService.cs" />
+    <Compile Include="FinancialAid\FinancialAidService.cs" />
+    <Compile Include="FinancialAid\IFinancialAidService.cs" />
+    <Compile Include="GradeBook\IStudentGradeBookService.cs" />
+    <Compile Include="GradeBook\StudentGradeBookService.cs" />
+    <Compile Include="Ledger\ILedgerService.cs" />
+    <Compile Include="Ledger\LedgerService.cs" />
+    <Compile Include="ProgramCourseStatus\IProgramCourseProgressService.cs" />
+    <Compile Include="ProgramCourseStatus\ProgramCourseProgressService.cs" />
+    <Compile Include="Report\GetStudent1098TReportService.cs" />
+    <Compile Include="Report\IGetStudent1098TReportService.cs" />
+    <Compile Include="Report\IReportsService.cs" />
+    <Compile Include="Report\ReportsService.cs" />
+    <Compile Include="ScheduleOfCourses\IScheduleOfCoursesService.cs" />
+    <Compile Include="ScheduleOfCourses\ScheduleOfCoursesService.cs" />
+    <Compile Include="Settings\ISettingsService.cs" />
+    <Compile Include="Settings\SettingsService.cs" />
+    <Compile Include="Survey\ISurveyService.cs" />
+    <Compile Include="Survey\SurveyService.cs" />
+    <Compile Include="User\IWebUserService.cs" />
+    <Compile Include="User\WebUserService.cs" />
+    <Compile Include="Payment\IPaymentService.cs" />
+    <Compile Include="Payment\PaymentService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentTranscript\ITranscriptService.cs" />
+    <Compile Include="StudentTranscript\TranscriptService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DiamondD.Data\DiamondD.Data.csproj">
+      <Project>{2CFA66F8-C619-4091-A56A-CFD5F9F477A5}</Project>
+      <Name>DiamondD.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

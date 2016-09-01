@@ -1,0 +1,53 @@
+﻿<%@ Import Namespace="DiamondD.Web.Helpers"%>
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Register TagPrefix="footer" TagName="footer" Src="~/Controls/FooterControl.ascx" %>
+<%@ Register TagPrefix="MainMenu" TagName="MainMenu" Src="~/Controls/MainMenuControl.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+     <link href="<%=Page.ResolveUrl(AppHelper.CssUrl("Site.css")) %>" rel="stylesheet" type="text/css" />
+    <link href="<%=Page.ResolveUrl(AppHelper.CssUrl("Menu.css")) %>" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div style="width:100%; min-height:600px;">
+    <center>
+        <div style="width:100%; height:65px;">
+           
+        <div id="header" style="width:1000px; text-align:left; background-color:#E5E9EA;">
+            
+            <div id="title">
+                <img alt="DiamondD" src="<%= Page.ResolveUrl(AppHelper.ImageUrl("corner_logo.png")) %>" border="0px" /> 
+            </div>
+                <div style="height:65px; vertical-align:middle;">
+                    <br />
+                    <span class="h1_Blue">&nbsp;&nbsp; DiamondD -</span><span class="h1_GreenShad"> School Management Software & Services</span>
+                </div>
+              </div>
+            </div>
+            <div  style="width:1000px; height:2px; background-color:#E9EDF6"></div>
+              <div style="width:1000px; background-color:#E9EDF6">
+              <div style="width:1000px; text-align:right; vertical-align:top">
+                    <MainMenu:MainMenu ID="Menu" runat="server" />
+				</div>
+            </div>
+        <div id="MainOuterDiv" style="width:1000px;">
+        <div id="main" style="text-align:center">
+        <center>
+             <div  style="display:table-cell; vertical-align:top; text-align:left; text-align:center">
+                
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                
+             </div>
+           </center> 
+            <br />
+        </div>
+        <div id="FooterDiv" style="text-align:center; background-color:#E5E9EA;">
+            <footer:footer ID="footer" runat="server" lblFooterCSSClass="Heading5" />
+            </div>
+        </div>
+        </center>
+    </div>
+</body>
+</html>

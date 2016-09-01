@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2CFA66F8-C619-4091-A56A-CFD5F9F477A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DiamondD.Data</RootNamespace>
+    <AssemblyName>DiamondD.Data</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/DiamondD.Data/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="RouteDebug">
+      <HintPath>..\Dependencies\RouteDebug.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\Attendance\AttendanceEntry.cs" />
+    <Compile Include="DataAccess\Attendance\AttendanceSummary.cs" />
+    <Compile Include="DataAccess\Attendance\StudentAttendance.cs" />
+    <Compile Include="DataAccess\Attendance\StudentAttendanceSummary.cs" />
+    <Compile Include="DataAccess\Common\Course.cs" />
+    <Compile Include="DataAccess\Common\Program.cs" />
+    <Compile Include="DataAccess\Common\Session.cs" />
+    <Compile Include="DataAccess\Common\StudentGroup.cs" />
+    <Compile Include="DataAccess\Common\StudentStatus.cs" />
+    <Compile Include="DataAccess\Common\Term.cs" />
+    <Compile Include="DataAccess\CosmetologyGradeBook\CosmetologyGradeBookLab.cs" />
+    <Compile Include="DataAccess\CosmetologyGradeBook\CosmetologyGradeBookSummary.cs" />
+    <Compile Include="DataAccess\CosmetologyGradeBook\CosmetologyGradeBookTest.cs" />
+    <Compile Include="DataAccess\CosmetologyGradeBook\StudentCosmetologyGradeBookLab.cs" />
+    <Compile Include="DataAccess\CosmetologyGradeBook\StudentCosmetologyGradeBookSummary.cs" />
+    <Compile Include="DataAccess\CosmetologyGradeBook\StudentCosmetologyGradeBookTest.cs" />
+    <Compile Include="DataAccess\Enrollment\CourseEnrollment.cs" />
+    <Compile Include="DataAccess\Enrollment\CourseOffering.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\FinancialAid\FinancialAidItem.cs" />
+    <Compile Include="DataAccess\GradeBook\GradeBookInfo.cs" />
+    <Compile Include="DataAccess\GradeBook\StudentGradeBook.cs" />
+    <Compile Include="DataAccess\Helpers\Utils.cs" />
+    <Compile Include="DataAccess\Ledger\LedgerInfo.cs" />
+    <Compile Include="DataAccess\Ledger\StudentLedger.cs" />
+    <Compile Include="DataAccess\Log\SqlActivityLogger.cs" />
+    <Compile Include="DataAccess\Payment\PaymentProcess.cs" />
+    <Compile Include="DataAccess\ProgramCourseStatus\ProgramCourseProgress.cs" />
+    <Compile Include="DataAccess\ProgramCourseStatus\StudentProgramCourseProgress.cs" />
+    <Compile Include="DataAccess\Report\Student1098TReport.cs" />
+    <Compile Include="DataAccess\Report\ReportInfo.cs" />
+    <Compile Include="DataAccess\Report\WebReport.cs" />
+    <Compile Include="DataAccess\Repositories\Base\IAttendanceRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\IBaseRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\ICosmetologyGradeBookRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\IEnrollmentRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\IFinancialAidRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\IGetStudentReports.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\ILedgerRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\IPaymentRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\IProgramCourseProgressRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\IReportRepository.cs" />
+    <Compile Include="DataAccess\Repositories\Base\IScheduleOfCoursesRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\ISettingsRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\ISqlGradeBookRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\ISurveyRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\ITranscriptRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\IWebUserRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\Base\ICommonRepository.cs" />
+    <Compile Include="DataAccess\Repositories\SqlAttendanceRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlCommonRepository.cs" />
+    <Compile Include="DataAccess\Repositories\SqlCosmetologyGradeBookRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlEnrollmentRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlFinancialAidRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlGetStudentReports.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlGradeBookRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlLedgerRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlPaymentRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlProgramCourseProgressRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlReportsRepository.cs" />
+    <Compile Include="DataAccess\Repositories\SqlRepositoryUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlScheduleOfCoursesRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlSettingsRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlSurveyRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlTranscriptRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repositories\SqlWebUserRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ScheduleOfCourses\ScheduleOfCourse.cs" />
+    <Compile Include="DataAccess\ScheduleOfCourses\StudentScheduleOfCourses.cs" />
+    <Compile Include="DataAccess\Settings\WebCustomMsgsName.cs" />
+    <Compile Include="DataAccess\StudentTranscript\RegisteredCourse.cs" />
+    <Compile Include="DataAccess\Survey\Survey.cs" />
+    <Compile Include="DataAccess\Survey\Question.cs" />
+    <Compile Include="DataAccess\Survey\QuestionGroup.cs" />
+    <Compile Include="DataAccess\Survey\Answer.cs" />
+    <Compile Include="DataAccess\Survey\SurveyCourseSchedule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Survey\SurveyStudent.cs" />
+    <Compile Include="DataAccess\User\WebUser.cs" />
+    <Compile Include="DataAccess\Payment\PaymentInfo.cs" />
+    <Compile Include="DataAccess\Payment\PaymentSchedule.cs" />
+    <Compile Include="DataAccess\StudentTranscript\Term.cs" />
+    <Compile Include="DataAccess\User\WebUserRole.cs" />
+    <Compile Include="DataAccess\FinancialAid\FinancialAidList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\StudentTranscript\Transcript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DBScripts\script.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

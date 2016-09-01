@@ -1,0 +1,379 @@
+2014-03-31 13:03:46,826 [11] ERROR DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:53) - Unable to get Login Message.
+System.Exception: Some error occured on server side. Please try later. ---> System.TypeInitializationException: The type initializer for 'Microsoft.Practices.EnterpriseLibrary.Data.Database' threw an exception. ---> System.IO.FileLoadException: Could not load file or assembly 'Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+   at System.ModuleHandle.ResolveType(RuntimeModule module, Int32 typeToken, IntPtr* typeInstArgs, Int32 typeInstCount, IntPtr* methodInstArgs, Int32 methodInstCount, ObjectHandleOnStack type)
+   at System.ModuleHandle.ResolveTypeHandleInternal(RuntimeModule module, Int32 typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext)
+   at System.Reflection.RuntimeModule.ResolveType(Int32 metadataToken, Type[] genericTypeArguments, Type[] genericMethodArguments)
+   at System.Reflection.CustomAttribute.FilterCustomAttributeRecord(CustomAttributeRecord caRecord, MetadataImport scope, Assembly& lastAptcaOkAssembly, RuntimeModule decoratedModule, MetadataToken decoratedToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, Object[] attributes, IList derivedAttributes, RuntimeType& attributeType, IRuntimeMethodInfo& ctor, Boolean& ctorHasParameters, Boolean& isVarArg)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeAssembly assembly, RuntimeType caType)
+   at System.Reflection.RuntimeAssembly.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Resources.ResourceManager.GetSatelliteContractVersion(Assembly a)
+   at System.Resources.ManifestBasedResourceGroveler.GetSatelliteAssembly(CultureInfo lookForCulture, StackCrawlMark& stackMark)
+   at System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   at System.Resources.ResourceManager.GetString(String name, CultureInfo culture)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Properties.Resources.get_Password() in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Properties\Resources.Designer.cs:line 376
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database..cctor() in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 32
+   --- End of inner exception stack trace ---
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database..ctor(String connectionString, DbProviderFactory dbProviderFactory)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Sql.SqlDatabase..ctor(String connectionString) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Sql\SqlDatabase.cs:line 42
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.CreateDatabase() in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 27
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.CreateDatabase(IBaseRepository repository) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 35
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteScalar(IBaseRepository repository, CommandType commandType, String query) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 62
+   at DiamondD.Data.DataAccess.Repositories.SqlSettingsRepository.GetSetting(String settingName) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlSettingsRepository.cs:line 85
+   at DiamondD.Data.DataAccess.Repositories.SqlSettingsRepository.GetLoginMsgText() in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlSettingsRepository.cs:line 20
+   at DiamondD.Services.Settings.SettingsService.GetLoginMsgText() in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Services\Settings\SettingsService.cs:line 53
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.Settings.SettingsService.GetLoginMsgText() in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Services\Settings\SettingsService.cs:line 62
+   at DiamondD.Web.Controllers.UserController.Login() in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Controllers\UserController.cs:line 105
+2014-03-31 13:04:04,948 [14] ERROR DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:53) - Unable to get Login Message.
+System.Exception: Some error occured on server side. Please try later. ---> System.TypeInitializationException: The type initializer for 'Microsoft.Practices.EnterpriseLibrary.Data.Database' threw an exception. ---> System.IO.FileLoadException: Could not load file or assembly 'Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+   at System.ModuleHandle.ResolveType(RuntimeModule module, Int32 typeToken, IntPtr* typeInstArgs, Int32 typeInstCount, IntPtr* methodInstArgs, Int32 methodInstCount, ObjectHandleOnStack type)
+   at System.ModuleHandle.ResolveTypeHandleInternal(RuntimeModule module, Int32 typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext)
+   at System.Reflection.RuntimeModule.ResolveType(Int32 metadataToken, Type[] genericTypeArguments, Type[] genericMethodArguments)
+   at System.Reflection.CustomAttribute.FilterCustomAttributeRecord(CustomAttributeRecord caRecord, MetadataImport scope, Assembly& lastAptcaOkAssembly, RuntimeModule decoratedModule, MetadataToken decoratedToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, Object[] attributes, IList derivedAttributes, RuntimeType& attributeType, IRuntimeMethodInfo& ctor, Boolean& ctorHasParameters, Boolean& isVarArg)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeAssembly assembly, RuntimeType caType)
+   at System.Reflection.RuntimeAssembly.GetCustomAttributes(Type attributeType, Boolean inherit)
+   at System.Resources.ResourceManager.GetSatelliteContractVersion(Assembly a)
+   at System.Resources.ManifestBasedResourceGroveler.GetSatelliteAssembly(CultureInfo lookForCulture, StackCrawlMark& stackMark)
+   at System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   at System.Resources.ResourceManager.GetString(String name, CultureInfo culture)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Properties.Resources.get_Password() in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Properties\Resources.Designer.cs:line 376
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database..cctor() in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 32
+   --- End of inner exception stack trace ---
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database..ctor(String connectionString, DbProviderFactory dbProviderFactory)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Sql.SqlDatabase..ctor(String connectionString) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Sql\SqlDatabase.cs:line 42
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.CreateDatabase() in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 27
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.CreateDatabase(IBaseRepository repository) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 35
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteScalar(IBaseRepository repository, CommandType commandType, String query) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 62
+   at DiamondD.Data.DataAccess.Repositories.SqlSettingsRepository.GetSetting(String settingName) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlSettingsRepository.cs:line 85
+   at DiamondD.Data.DataAccess.Repositories.SqlSettingsRepository.GetLoginMsgText() in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlSettingsRepository.cs:line 20
+   at DiamondD.Services.Settings.SettingsService.GetLoginMsgText() in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Services\Settings\SettingsService.cs:line 53
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.Settings.SettingsService.GetLoginMsgText() in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Services\Settings\SettingsService.cs:line 62
+   at DiamondD.Web.Controllers.UserController.Login() in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Controllers\UserController.cs:line 105
+2014-03-31 16:17:13,704 [24] ERROR DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.IO.FileLoadException: Could not load file or assembly 'Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+   at Microsoft.Practices.EnterpriseLibrary.Data.RefCountingDataReader..ctor(DatabaseConnectionWrapper connection, IDataReader innerReader)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.CreateWrappedReader(DatabaseConnectionWrapper connection, IDataReader innerReader) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 861
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 847
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 28
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Controllers\UserController.cs:line 157
+2014-03-31 16:17:34,411 [24] ERROR DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.IO.FileLoadException: Could not load file or assembly 'Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+   at Microsoft.Practices.EnterpriseLibrary.Data.RefCountingDataReader..ctor(DatabaseConnectionWrapper connection, IDataReader innerReader)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.CreateWrappedReader(DatabaseConnectionWrapper connection, IDataReader innerReader) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 861
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 847
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 28
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Controllers\UserController.cs:line 157
+2014-03-31 16:18:03,230 [15] ERROR DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.IO.FileLoadException: Could not load file or assembly 'Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+   at Microsoft.Practices.EnterpriseLibrary.Data.RefCountingDataReader..ctor(DatabaseConnectionWrapper connection, IDataReader innerReader)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.CreateWrappedReader(DatabaseConnectionWrapper connection, IDataReader innerReader) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 861
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 847
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 28
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Controllers\UserController.cs:line 157
+2014-03-31 16:24:02,159 [14] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'cosmo' has logged in.
+2014-04-03 15:11:12,263 [13] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'cosmo' has logged in.
+2014-04-03 18:08:30,211 [16] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:johnson, password:admin123
+2014-04-03 18:08:41,993 [17] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:johnson, password:abc123
+2014-04-03 18:09:35,159 [17] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:instructor2, password:57189
+2014-04-03 18:09:48,481 [14] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:instructor2, password:abc123
+2014-04-03 18:11:02,071 [16] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-04-03 18:14:58,755 [10] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-04-03 18:16:12,013 [14] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged out.
+2014-04-03 18:16:18,838 [7] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 18:19:08,277 [12] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 18:35:00,052 [13] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 18:38:50,179 [13] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 18:44:07,755 [10] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 18:44:24,531 [14] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged out.
+2014-04-03 18:44:32,612 [14] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 18:46:51,649 [13] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 19:03:44,610 [11] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-04-03 19:08:48,844 [12] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 19:09:10,159 [8] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged out.
+2014-04-03 19:09:13,502 [12] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 19:09:41,007 [14] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged out.
+2014-04-03 19:09:48,986 [14] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-04-03 19:18:37,113 [31] WARN  DiamondD.Web.Controllers.Filters.RequiresAuthenticationAttribute (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:38) - A User tried to view '/User.mvc/Logout' when he was not logged in.
+2014-04-03 19:19:01,240 [26] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 19:19:16,112 [17] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged out.
+2014-04-03 19:19:22,574 [11] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-04-03 19:21:09,512 [32] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged out.
+2014-04-03 19:21:30,667 [20] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 19:21:45,173 [21] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 19:25:43,633 [42] WARN  DiamondD.Web.Controllers.Filters.RequiresAuthenticationAttribute (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:38) - A User tried to view '/User.mvc/Logout' when he was not logged in.
+2014-04-03 19:27:40,588 [9] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 19:30:05,968 [5] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged out.
+2014-04-03 19:30:12,095 [14] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-04-03 19:30:20,330 [11] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged out.
+2014-04-03 19:30:24,487 [5] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 19:30:44,063 [10] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged out.
+2014-04-03 19:30:50,636 [5] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-04-03 19:31:01,082 [12] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged out.
+2014-04-03 19:31:06,058 [7] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-03 19:31:21,424 [5] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged out.
+2014-04-03 19:31:28,658 [5] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-04-03 19:31:46,582 [16] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged out.
+2014-04-04 21:19:31,613 [10] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-09 12:52:53,609 [13] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-09 13:03:20,002 [9] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-09 14:21:57,390 [13] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-09 14:53:03,640 [13] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-09 15:06:25,954 [13] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-09 15:14:36,551 [15] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-09 15:19:38,986 [7] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-04-09 15:20:31,718 [19] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged out.
+2014-04-09 15:37:01,049 [47] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-04-09 15:37:08,483 [75] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged out.
+2014-05-08 11:32:26,877 [14] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - (AskSecretQuestion case) username:Tina, email:mramzankhan@hotmail.com
+2014-05-08 11:32:40,535 [12] ERROR DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred while confirming secret answer.
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at DiamondD.Web.Controllers.UserController.SendEmail(String displayName, String emailFrom, String emailTo, String subject, String body) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Controllers\UserController.cs:line 377
+   at DiamondD.Web.Controllers.UserController.AskSecretQuestion(FormCollection collection) in c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Controllers\UserController.cs:line 316
+2014-05-13 20:37:04,662 [11] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged in.
+2014-05-13 20:41:00,219 [33] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'admin' has logged out.
+2014-05-13 20:41:02,581 [32] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-05-13 20:54:26,310 [12] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-05-13 20:58:20,653 [8] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-05-13 21:02:26,811 [16] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-05-13 21:04:52,902 [6] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged out.
+2014-05-21 20:56:21,202 [30] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-05-21 21:08:24,395 [22] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-05-21 21:13:52,850 [7] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-09-02 09:49:01,299 [8] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-09-02 14:08:37,782 [171] WARN  DiamondD.Web.Controllers.Filters.RequiresAuthenticationAttribute (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:38) - A User tried to view '/Reports.mvc/GradeBook' when he was not logged in.
+2014-09-02 14:08:46,783 [148] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2014-09-02 14:10:06,147 [147] WARN  DiamondD.Web.Controllers.Filters.RequiresAuthenticationAttribute (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:38) - A User tried to view '/Reports.mvc/GradeBook' when he was not logged in.
+2014-09-02 14:10:23,969 [151] INFO  DiamondD.Web.Controllers.UserController (c:\LEGACY_DSIS\trunk\DiamondD\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2015-09-22 17:24:05,328 [5] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-22 17:26:27,380 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged out.
+2015-09-22 17:27:55,738 [15] WARN  DiamondD.Web.Controllers.Filters.RequiresAuthenticationAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A User tried to view '/User.mvc/Logout' when he was not logged in.
+2015-09-22 18:21:21,190 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2015-09-22 18:43:17,899 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-22 18:46:03,201 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:tina, password:abc@123
+2015-09-22 18:46:11,004 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 10:35:56,318 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2015-09-23 10:39:12,345 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Tina' has logged in.
+2015-09-23 10:59:24,327 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 11:01:57,151 [6] WARN  DiamondD.Web.Controllers.Filters.RequiresAuthenticationAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A User tried to view '/Reports.mvc/PaymentSchedule' when he was not logged in.
+2015-09-23 11:02:11,724 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 11:10:01,653 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 11:12:16,415 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 11:13:13,797 [7] WARN  DiamondD.Web.Controllers.Filters.RequiresAuthenticationAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A User tried to view '/Reports.mvc/PaymentSchedule' when he was not logged in.
+2015-09-23 11:13:19,712 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:tina, password:abc
+2015-09-23 11:13:25,507 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 11:13:34,599 [7] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-23 11:13:47,849 [7] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-23 11:13:53,103 [7] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-23 11:14:41,249 [7] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-23 11:30:22,643 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 11:30:31,851 [6] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-23 11:35:56,909 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 11:45:23,775 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 11:46:22,799 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 11:47:09,271 [5] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 11:49:59,712 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 11:55:57,779 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 12:00:24,953 [8] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 12:02:41,128 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 12:05:04,692 [8] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 13:27:28,774 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 14:29:28,262 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 14:56:27,929 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:tina, password:abc@123
+2015-09-23 14:56:35,617 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 14:59:22,070 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 15:48:19,792 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 15:50:48,004 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 16:14:15,335 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 16:23:49,290 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 17:12:14,926 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 18:15:47,096 [8] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 18:16:51,100 [6] WARN  DiamondD.Web.Controllers.Filters.RequiresAuthenticationAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A User tried to view '/Reports.mvc/PaymentSchedule' when he was not logged in.
+2015-09-23 18:16:59,146 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 18:18:21,302 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 18:19:46,805 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 18:21:07,179 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 18:21:16,506 [7] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 18:31:50,724 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 18:31:58,250 [6] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 20:53:41,720 [5] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 20:53:51,458 [7] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 20:54:30,718 [7] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 20:55:01,165 [9] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 20:56:49,551 [9] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 20:57:09,423 [11] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 20:59:03,177 [13] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 21:04:15,447 [12] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 21:04:22,759 [12] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 21:07:02,863 [20] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 21:08:18,327 [20] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 21:59:40,255 [31] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user  tried to view '/Reports.mvc/AcademicReview' but he wasn't allowed to access it.
+2015-09-23 22:00:00,273 [31] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 22:00:06,264 [34] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 22:01:59,559 [31] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged out.
+2015-09-23 22:02:10,873 [37] WARN  DiamondD.Web.Controllers.Filters.RequiresAuthenticationAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A User tried to view '/User.mvc/Logout' when he was not logged in.
+2015-09-23 22:11:24,890 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 22:11:37,051 [7] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 22:13:28,426 [8] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user tina tried to view '/Reports.mvc/PaymentReceipt' but he wasn't allowed to access it.
+2015-09-23 22:17:14,321 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-23 22:35:48,949 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-24 10:47:45,014 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-24 11:44:49,043 [8] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-24 11:56:40,306 [7] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user  tried to view '/Reports.mvc/PaymentSchedule' but he wasn't allowed to access it.
+2015-09-24 11:56:49,263 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-24 12:11:14,532 [7] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user  tried to view '/Reports.mvc/PaymentSchedule' but he wasn't allowed to access it.
+2015-09-24 12:11:26,985 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-24 12:34:09,797 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-24 14:04:00,056 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-24 14:16:37,863 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-24 14:57:18,306 [18] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user  tried to view '/Reports.mvc/PaymentSchedule' but he wasn't allowed to access it.
+2015-09-24 14:57:37,020 [18] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-24 15:45:19,693 [5] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-24 15:56:21,657 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:alex, password:abc123
+2015-09-24 15:56:36,463 [9] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:Alex, password:abc123
+2015-09-24 15:57:08,538 [8] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Acuna' has logged in.
+2015-09-24 16:05:17,475 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Cosmo' has logged in.
+2015-09-24 16:05:30,931 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'Cosmo' has logged out.
+2015-09-24 16:05:36,072 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:barre, password:abc123
+2015-09-24 16:06:07,672 [10] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'zfrank' has logged in.
+2015-09-24 16:11:11,806 [11] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'zfrank' has logged out.
+2015-09-24 16:11:15,858 [11] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'testnbame' has logged in.
+2015-09-24 17:21:22,810 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-24 17:25:27,213 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-24 17:34:53,619 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-25 12:31:32,540 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-26 10:32:37,713 [8] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-26 10:45:16,419 [6] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user  tried to view '/Reports.mvc/PaymentSchedule' but he wasn't allowed to access it.
+2015-09-26 10:45:29,968 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:tina, password:abce123
+2015-09-26 10:45:36,051 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-26 10:48:30,347 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-26 10:52:25,316 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-26 10:54:08,445 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-26 12:04:51,472 [9] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-26 12:05:01,445 [9] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlPaymentRepository.cs:line 25
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291
+2015-09-26 12:05:16,494 [9] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlPaymentRepository.cs:line 25
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291
+2015-09-26 12:06:04,550 [11] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlPaymentRepository.cs:line 25
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291

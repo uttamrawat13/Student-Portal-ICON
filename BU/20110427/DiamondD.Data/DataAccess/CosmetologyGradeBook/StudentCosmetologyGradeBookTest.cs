@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace DiamondD.Data.DataAccess.CosmetologyGradeBook
+{
+   public class StudentCosmetologyGradeBookTest
+    {
+       public IList<CosmetologyGradeBookTest> cosmetologyGradeBookTests { get; private set; }
+       
+       public string StudentName
+       {
+           get
+           {
+               foreach (var item in cosmetologyGradeBookTests)
+               {
+                   return item.Student;
+               }
+               return null;
+           }
+
+       }
+
+        public StudentCosmetologyGradeBookTest() : this(null)
+        { 
+        }
+
+        public StudentCosmetologyGradeBookTest(IList<CosmetologyGradeBookTest> cosmetologyGradeBookTest)
+        {
+            this.cosmetologyGradeBookTests = cosmetologyGradeBookTest;
+        }
+
+    }
+}

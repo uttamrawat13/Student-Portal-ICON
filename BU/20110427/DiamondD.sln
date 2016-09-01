@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondD.Web", "DiamondD.Web\DiamondD.Web.csproj", "{733B09AB-1470-45CE-A29B-D334D3070706}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondD.Web.Tests", "DiamondD.Web.Tests\DiamondD.Web.Tests.csproj", "{FACADDB6-59AD-4D72-891E-40088F8600EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondD.Data", "DiamondD.Data\DiamondD.Data.csproj", "{2CFA66F8-C619-4091-A56A-CFD5F9F477A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondD.Services", "DiamondD.Services\DiamondD.Services.csproj", "{6C21D24C-628C-4F77-B5BE-42E84C3BA124}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{733B09AB-1470-45CE-A29B-D334D3070706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{733B09AB-1470-45CE-A29B-D334D3070706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{733B09AB-1470-45CE-A29B-D334D3070706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{733B09AB-1470-45CE-A29B-D334D3070706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FACADDB6-59AD-4D72-891E-40088F8600EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FACADDB6-59AD-4D72-891E-40088F8600EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FACADDB6-59AD-4D72-891E-40088F8600EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FACADDB6-59AD-4D72-891E-40088F8600EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CFA66F8-C619-4091-A56A-CFD5F9F477A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CFA66F8-C619-4091-A56A-CFD5F9F477A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CFA66F8-C619-4091-A56A-CFD5F9F477A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CFA66F8-C619-4091-A56A-CFD5F9F477A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C21D24C-628C-4F77-B5BE-42E84C3BA124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C21D24C-628C-4F77-B5BE-42E84C3BA124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C21D24C-628C-4F77-B5BE-42E84C3BA124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C21D24C-628C-4F77-B5BE-42E84C3BA124}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

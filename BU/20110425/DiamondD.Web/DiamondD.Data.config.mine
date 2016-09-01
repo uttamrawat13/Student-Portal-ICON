@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<connectionStrings>
+  <add name="DD_StudentPortal_ConnectionString" 
+       connectionString = 
+       "Server  = Astoria\SQLExpress; 
+       Database = MIL-FRE; 
+       User Id  = DDWeb; 
+       Password = webdd123;"
+      providerName="System.Data.SqlClient" />
+</connectionStrings>
+
+<!--<connectionStrings>
+  <add name="DD_StudentPortal_ConnectionString"
+       connectionString = 
+       "Server  = VERSONIC-MAC\SQLEXPRESS; 
+       Database = test; 
+       User Id  = dd_user; 
+       Password = 123456;"
+      providerName="System.Data.SqlClient" />
+</connectionStrings>-->

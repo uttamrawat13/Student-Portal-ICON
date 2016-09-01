@@ -1,0 +1,1021 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+
+/* --------------------- Project Color Fields  ----------------------------*/
+body
+{
+    background-color: #ffffff;
+    font-size: .75em;
+    font-family: Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    color: black;       /* Use for change normal text color. */
+}
+
+
+.TopDiv
+{
+	background:#E8EEF4;        /* Use for change square body color. */
+	text-align:left; border:1px solid Navy; vertical-align:middle;
+	
+}
+
+.headerBKColor
+{
+    background-color: #E5E9EA;       /* Use for change header background color. */
+}
+
+.footerBKColor
+{
+    background-color: #E5E9EA;       /* Use for change footer background color. */
+}
+
+.menuBKColor
+{
+    background-color: #E8EEF4;       /* Use for change menu background color. */
+}
+
+.menuBKColorWidth560px
+{display:table-cell; width:560px; background-color: #E8EEF4;}
+
+.displayCellWidth40px
+{display:table-cell; width:40px;}
+
+.alignLeftPadding
+{text-align:Left;padding:0}
+
+.displyInlineWhiteSpaceLeft
+{display:inline;white-space:nowrap;float:left}
+
+.h1_GreenShad
+{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    margin: 0;
+    color: #539EB5;       /* Use for change Title color. */
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px !important;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: black;       /* Use for change main heading color. */
+    font-family: Arial, Helvetica, sans-serif;
+}
+.BlueHeading
+{
+    font-size: 1.1em;
+    color : Blue;       /* Use for change sub heading color. */
+    font-weight:bold;
+}
+a:link,.bold:link 
+{
+    color: #539EB5;       /* Use for change link color. */
+    text-decoration: underline;
+}
+a:visited,.bold:visited
+{
+    color: black;       /* Use for change visit link color. */
+}
+a:hover,.bold:hover 
+{
+    color: black;       /* Use for change hover link color. */
+    text-decoration: none;
+}
+a:active,.bold:active
+{
+    color: black;       /* Use for change active link color. */
+}
+/* --------------------- End  ----------------------------*/
+
+
+
+/**************** HyperLink Class     *************************/
+
+
+
+p, ul
+{
+    margin-bottom: 20px;
+    margin-left: 0px;
+    line-height: 1.6em;
+}
+
+
+.boldLink:link { font-weight:bold;}      /* unvisited link  */
+.boldLink:visited {font-weight:bold}     /* visited link    */
+.boldLink:hover {font-weight:bold;}      /* mouse over link */
+.boldLink:active {font-weight:bold}      /* selected link   */
+
+/******************** End HyperLink Class   *******************/
+
+
+
+/* this rule styles <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page
+{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header
+{
+    position: relative;
+    margin-bottom: 0px;
+    color: #000;
+    padding: 0;
+}
+#header h1
+{
+    font-weight: bold;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    margin: 0;
+    color: black;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px !important;
+}
+.h1_Blue
+{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    margin: 0;
+    color: Navy;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px !important;
+}
+
+#main
+{
+    padding: 5px 0px 5px 0px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscrore */
+}
+#footer
+{
+    color: #999;
+    padding: 10px 0;
+    text-align: center;
+    line-height: normal;
+    margin: 0;
+    font-size: .9em;
+}
+fieldset 
+{
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid Navy;
+    background:#E8EEF4;        /* Use for change square body color. */
+	text-align:left;
+	vertical-align:middle;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset label 
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 0px 4px 8px 4px;
+}
+
+input[type="text"] 
+{
+    border: 1px solid #CCCCCC;
+    width:150px;
+}
+
+input[type="password"] 
+{
+    border: 1px solid #CCCCCC;
+    width:150px;
+}
+
+
+/* MISC  
+----------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+.error
+{
+    color:Red;
+}
+
+#menucontainer
+{
+    margin-top:34px;
+    margin-left:0px;
+}
+
+div#title
+{
+    display:block;
+    float:left;
+    text-align:left;
+}
+
+div#logo
+{
+    display:block;
+    float:left;
+    text-align:right;
+    position:absolute;
+    margin-right:0px;
+    margin-top:0px;
+}
+
+#logindisplay
+{
+    font-size:1.1em;
+    display:block;
+    text-align:right;
+    margin:10px;
+    color:White;
+}
+
+#logindisplay a:link
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+/************* Set FieldSet Tag Color **********************/
+fieldset 
+{
+border: 1px solid #black;
+}
+.RedStar
+{
+    color:Red;    
+}
+/*********************************************************/
+
+
+/******************  Text Style **************************/
+/* text style used for checkboxes in the admin and edit pages, for Nav compatibility */
+
+.NormalBold
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 10px;
+    color:black;    
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+
+h1
+{
+    font-size: 2.5em;
+    font-family:  Times New Roman, sans-serif, Arial, Helvetica;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-style:italic;
+    font-weight:normal;
+}
+h2
+{
+    padding: 0 0 10px 0;
+}
+h3
+{
+    font-size: 1.2em;
+}
+h4
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+h5, h6
+{
+    font-size: 1em;
+}
+.Heading2,.Heading1,Heading3,Heading4,Heading5
+{
+	font-size: 1.5em;
+    color: black;
+    font-family:  Times New Roman, sans-serif, Arial, Helvetica;
+}
+.Heading1
+{
+	  font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.Heading1
+{
+	padding: 0 0 10px 0;
+}
+.Heading3
+{
+     font-size: 2em;
+     font-family: Times New Roman, sans-serif, Arial, Helvetica;
+     font-style:italic;
+	 font-weight:normal;
+}
+.Heading4
+{
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: Verdana, Times New Roman, sans-serif, Arial, Helvetica; 
+    padding: 2px 0px 8px 0px;
+}
+.Heading5
+{
+    font-size:large;
+    font-weight:bold;
+}
+
+.Heading4Italic
+{
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: Verdana, Times New Roman, sans-serif, Arial, Helvetica; 
+    padding: 2px 0px 8px 0px;
+    font-style:italic;
+}
+.LastTableRow
+{
+    font-size: 1.1em;
+    font-weight: 400;
+    padding: 2px 0px 8px 0px;
+    font-style:italic;
+    font-weight:normal;
+    }
+.Heading5
+{
+    font-size: 1em;
+}
+.Heading6
+{
+    font-size: 0.90em;
+    font-weight:bold;
+}
+
+/****************** Div Table     *************************/
+.div-table{display:table; }
+.div-table-caption{display:table-caption; }
+.div-table-row{display:table-row;}
+.div-table-col{display:table-cell; padding: 0px;}
+
+/*************** Table Properties    ********************/
+
+ .TranscriptTable
+ {
+    width:100%;
+    border-color:Black;
+    border:1;    
+ }
+ .HeadRow
+ {
+    background-color:#DFEBF2;
+    width:100%;
+  }
+  
+ .EnrollmentHeadRow
+ {
+    background-color:#DFEBF2;
+    width:100%;
+    text-align:center;
+  }
+.TablePadding
+{
+    padding : 4px 4px 4px 4px;
+} 
+
+.TablePaddingWidth80px
+{
+    padding : 4px 4px 4px 4px;
+    width:80px;
+} 
+
+.TablePaddingWidth200px
+{
+    padding : 4px 4px 4px 4px;
+    width:200px;
+} 
+
+/*************** End Table Properties    ****************/
+
+.LoginDiv1
+{
+    display:table-cell; text-align:left; width:650px; vertical-align:top;
+}
+
+.LoginDiv2
+{
+    display:table-cell; width:25px; text-align:center;
+}
+.zeroBorder
+{
+    border:0;
+}
+.LoginDiv3
+{
+    display:table-cell; width:325px; vertical-align:top;
+}
+.fullWidthHeight
+{
+    height:100%; width:100%;
+}
+.LoginDiv4
+{
+    margin-left:auto; margin-right:auto; width:350px; text-align:center;
+    padding:0px 25px 0px 25px;
+}
+.LoginTD1
+{
+    width:80px;
+}
+.LoginTD2
+{
+    width:5px;
+}
+.DisplayNone
+{
+    display:none;
+}
+.LoginUnderlineBold
+{
+   text-decoration:underline;
+   font-family: Verdana, Helvetica, sans-serif;
+   font-size: 10px;
+   color:black; 
+   
+}
+.valignMiddle
+{
+    vertical-align:middle
+}
+.ErrorMsg
+{
+    font-size:larger; font-weight:bold; font-style:italic; color:Red;
+}
+.RegisterDiv1
+{
+    display:table-row;
+    width:100%;
+}
+.RegisterDiv2, .DivCulomnwidth200Right
+{
+    display:table-cell;
+    padding: 0px;
+    width:200px; text-align:right;
+}
+.RegisterDiv3, .DivCulomnwidth5Right
+{
+    display:table-cell;
+    padding: 0px;
+    width:5px; text-align:right;
+}
+
+.alignCenter
+{text-align:center;}
+
+.DivCulomnwidth180Right
+{ display:table-cell; padding: 0px; width:180px; text-align:right;}
+
+.DivCulomnwidth700Center
+{ display:table-cell; padding: 0px; width:700px; text-align:center;}
+
+.RegisterDiv4
+{
+    display:table-cell;
+    padding: 0px;
+    width:150px; text-align:left;
+}
+
+.RegisterDiv5, .DivColumnWidth150Right
+{
+    display:table-cell;
+    padding: 0px;
+    width:150px; text-align:right;
+}
+.RegisterDiv6
+{
+    width:100%; display:none; text-align:center;
+}
+.RegisterDiv7
+{
+    display:table-cell;
+    padding: 0px;
+    width:300px; text-align:left;
+}
+.RegisterInput
+{
+    width:275px;
+}
+.RegisterEmailErrMsg
+{
+    display:none;
+    color:Red;
+}
+.RegisterDiv8
+{
+   display:table-cell; padding: 0px; width:10px; text-align:right;
+}
+
+.AskSecretQuestionSuccessMsg
+{
+    font-size:larger; font-weight:bold; font-style:italic; color:Green;
+}
+.AskSecretQuestionErrorMsg
+{
+    font-size:larger; font-weight:bold; font-style:italic; color:Red
+}
+
+.DivRowWidth100
+{
+    display:table-row;
+    width:100%;
+}
+
+.DivColumnWidth100pxLeft
+{
+   display:table-cell; padding: 0px; width:100px; text-align:left;
+}
+
+.DivColumnWidth5pxright
+{
+    display:table-cell; padding: 0px; width:5px; text-align:right;
+}
+
+.DivColumnWidth280pxleft
+{
+    display:table-cell; padding: 0px; width:280px; text-align:left;
+}
+
+.DivColumnWidth180pxcenter
+{
+    display:table-cell; padding: 0px; width:180px; text-align:center;
+}
+
+.SuccessMsgDisplayNone
+{
+    display:none; font-size:larger; font-weight:bold; font-style:italic; color:Green
+}
+
+.bold
+{font-weight:bold;}
+.alignLeftWidth810px
+{text-align:left; width:810px}
+
+.width490px
+{
+    width:490px;
+}
+
+.Width100pLeft
+{
+    width:100%;
+    text-align:left;
+}
+.width80px
+{width:80px;}
+
+.width50px
+{width:50px;}
+
+.width700px
+{width:700px;}
+
+.width400px
+{width:400px;}
+
+.width100px
+{width:100px;}
+
+.width205px
+{width:205px;}
+
+.width300px
+{width:300px;}
+
+.width375px
+{width:375px;}
+
+.width350px
+{width:350px;}
+
+.width75px
+{width:75px;}
+
+.width810px
+{width:810px;}
+
+.width250px
+{width:250px;}
+
+.width310px
+{width:310px;}
+
+.width1000px
+{width:1000px}
+
+.width90px
+{width:90px;}
+
+.width200px
+{width:200px;}
+
+.width270px
+{width:270px;}
+
+.width280px
+{width:280px;}
+
+.width10px
+{width:10px;}
+
+.width340px
+{width:340px;}
+
+.width360px
+{width:360px;}
+
+.width150px
+{width:150px;}
+
+.width1000px
+{width:1000px;}
+
+.width100
+{width:100%}
+
+.width500px
+{width:500px;}
+
+.width800px
+{width:800px;}
+
+.width210px
+{width:210px;}
+
+.width160px
+{width:160px;}
+
+.width330px
+{width:330px}
+
+.width230px
+{width:230px}
+
+.width70px
+{width:70px}
+
+.width130px
+{width:130px}
+
+.width550px
+{width:550px}
+
+.width265px
+{width:265px}
+
+.width165px
+{width:165px}
+
+.width285px
+{width:285px}
+
+.width120px
+{width:120px}
+
+.width220px
+{width:220px}
+
+.width600px
+{width:600px;}
+
+.width60px
+{width:60px;}
+
+.DivMarginTop8px
+{margin-top:-8px}
+
+.italic
+{font-style:italic;}
+
+.width100Height65px
+{width:100%; height:65px;}
+
+.AdminSettingDiv1
+{text-align:left; padding-left:12px;}
+
+.colorGreen
+{color:Green;}
+
+.alignCenter
+{ text-align:center;}
+
+.width105px
+{width:105px;}
+
+.width100ItalicMedium
+{width:100%; font-style:italic; font-size:medium}
+
+.width100Italic
+{width:100%; font-style:italic;}
+
+.AdminSettingDiv2
+{text-align:left; padding-left:12px; display:none}
+
+.AdminSettingDiv3
+{display:table-cell; padding:0; width:20px; text-align:right;}
+
+.AdminSettingDiv4
+{display:table-cell; padding:0; width:490px; text-align:center;}
+
+.AdminSettingDiv5 , .DivColumnWidth96Right
+{display:table-cell; padding:0; width:96px; text-align:right;}
+
+.AdminSettingDiv6
+{display:table-cell; padding:0; width:490px; text-align:right;}
+
+.AdminSettingDiv7
+{display:table-cell; padding:0; width:96px; text-align:right;}
+
+.AdminSettingDiv9
+{display:none; text-align:left; padding-left:12px;}
+
+
+.AdminSettingDiv8
+{display:table-row; width:1000px;}
+
+.DivRowwidth1000
+{display:table-row; width:1000px;}
+
+.DisplayNoneErrorMsg
+{display:none; color:Red;}
+
+.displayNoneLeft
+{display:none;text-align:left}
+
+.DivWidth100MinHeight600px
+{width:100%; min-height:600px;}
+
+.DivWidth100Height60px
+{width:100%; height:60px;}
+
+.DivWidth1000Left
+{background-color: #E5E9EA; width:1000px; text-align:left}
+
+.width100Left
+{width:100%; text-align:left}
+
+.displayCellWidth400pxLeft
+{display:table-cell; width:500px; text-align:left}
+
+.DivWidth1000pxHeight2px
+{background-color: #E8EEF4; width:1000px; height:2px;}
+
+.DivWidth1000px
+{background-color: #E8EEF4; width:1000px;}
+
+.DivWidth1000pxRightTop
+{width:1000px; text-align:right; vertical-align:top}
+
+.DivWidth1000pxLeftTop
+{width:1000px; text-align:left; vertical-align:top}
+
+/*
+.DivTableCellTopCenter
+{display:table-cell; vertical-align:top; text-align:center}
+*/
+.DivColorCenter
+{background-color: #E5E9EA; text-align:center;clear:both}
+
+.DivWidth1000pxLeft
+{width:1000px; text-align:left; background-color: #E5E9EA; }
+
+.DivWidth1000pxCenterMiddle
+{width:1000px; vertical-align:middle;}
+
+.DivMiddleWidth
+{vertical-align:middle; width:100%}
+
+.DivWidth250pxRight
+{display:table-cell; padding:0; width:250px; text-align:right;}
+
+.DivWidth810Center
+{display:table-cell; padding:0; width:810px; text-align:center;}
+
+.DivWidth100Left
+{text-align:left; width:100%}
+
+.DivWidth100PaddingCenter
+{width:100%;padding:10em 0 10em 0; text-align:center;}
+
+.DivBorder2pxSolidRed
+{border:2px solid Red}
+
+.DivWidth100HeightPaddingCenter
+{padding:1em 0 1em 0;vertical-align:middle;width:100%;background-color:#FFaaaa;height:1.5em;}
+
+.DivFontMediumColor
+{font-size:medium; color:#FF033E}
+
+.DivLeftMarginColor
+{text-align:left; margin-right:25px; margin-left:25px; color:Black}
+
+.DivWidth41Padding
+{width:41%;padding:10em 0 10em 0;}
+
+.DivBorderSolidGreen
+{border:2px solid green}
+
+.DivWidth100HeightMiddlePaddingColor
+{padding:1em 0 1em 0;vertical-align:middle;width:100%;background-color:#ddeedd;height:1.5em;}
+
+.DivFontMediumGreen
+{font-size:medium; color:Green}
+
+.DivLeftGreen
+{text-align:left;margin-left:25px; color:Green}
+
+.DivLeftMarginLeft
+{text-align:left;margin-left:25px;}
+
+.DivLeftMarginColorRed
+{text-align:left;margin-left:25px; color:Red}
+
+.DivWidth95pxRight
+{display:table-cell; padding:0px; width:95px; text-align:right;}
+
+.alignLeft
+{text-align:left}
+
+.Height60pxMiddle
+{height:60px; vertical-align:middle;}
+
+
+.enrollmentTermsSelectWidth
+{width:110px;}
+
+.evenRowStyle {background: #EEE; min-height:52px}
+.oddRowStyle {background: #FFF; min-height:52px}
+
+.pagingNavigation { border-style:none; }
+
+.divAlignVertical {text-align:center;vertical-align:middle;}
+
+/*******************  Start Wizard *********************/
+#forgotUserNameWizard
+{
+    /*border:1px solid black;    */
+    display: inline-table;
+    text-align:center;
+    vertical-align:top;
+    background-color:white;
+    padding:25px;
+    height:155px;
+}
+
+.wizardHeading
+{
+font-size:20px;
+font-style:normal;
+font-weight:bold;
+text-align:left;
+border-bottom: 1px dotted gray;
+}
+
+.wizardStepHeading
+{
+    font-size:14px;
+    font-style:normal;
+    font-weight:normal;
+    text-align:left;
+    padding:0px 0px 0px 15px;
+}  
+      
+.wizardFinalMsg
+{
+    color: green;
+    font-size: 14px;
+    padding: 0 0 0 15px;
+    text-align: center;
+}
+
+.wizardNext
+{
+    /*clear:both;
+    display:block;
+    margin-left:25px;
+   */
+    
+	width:50px;
+	height:25px;
+}
+
+.wizardContent
+{
+    width:450px;
+    text-align:justify !important;
+    text-align: -moz-center;
+    padding: 5px 5px 25px 25px;
+}
+
+.wizardTextBox
+{
+    /*width:400px;
+    margin:left:5px;*/
+}
+
+.wizardformitemlable
+{
+    margin-bottom:20px;
+    clear:both;
+    width:150px;
+    float:left;
+}
+
+.wizardformiteminput
+{
+    width:450px;
+}
+
+.topMargin0
+{
+    margin-top:0px;    
+}
+.itemrow
+{
+    display: table;
+    }
+/*******************  End Wizard *********************/
+/*******************  End Text Style *********************/
+.OR
+{
+    text-align:center;
+    }
+    
+   

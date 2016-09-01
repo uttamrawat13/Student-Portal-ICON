@@ -1,0 +1,470 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body
+{
+    background-color: #ffffff;
+    font-size: .75em;
+    font-family: Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+/**************** HyperLink Class     *************************/
+
+a:link,.bold:link 
+{
+    color: #539EB5;
+    text-decoration: underline;
+}
+a:visited,.bold:visited
+{
+    color: black;
+}
+a:hover,.bold:hover 
+{
+    color: black;
+    text-decoration: none;
+}
+a:active,.bold:active
+{
+    color: black;
+}
+
+p, ul
+{
+    margin-bottom: 20px;
+    margin-left: 0px;
+    line-height: 1.6em;
+}
+
+
+.boldLink:link { font-weight:bold;}      /* unvisited link  */
+.boldLink:visited {font-weight:bold}     /* visited link    */
+.boldLink:hover {font-weight:bold;}      /* mouse over link */
+.boldLink:active {font-weight:bold}      /* selected link   */
+
+/******************** End HyperLink Class   *******************/
+
+
+
+/* this rule styles <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page
+{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header
+{
+    position: relative;
+    margin-bottom: 0px;
+    color: #000;
+    padding: 0;
+}
+#header h1
+{
+    font-weight: bold;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    margin: 0;
+    color: black;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px !important;
+}
+.h1_Blue
+{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    margin: 0;
+    color: Navy;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px !important;
+}
+.h1_GreenShad
+{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    margin: 0;
+    color: #539EB5;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px !important;
+}
+#main
+{
+    padding: 5px 0px 5px 0px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscrore */
+}
+#footer
+{
+    color: #999;
+    padding: 10px 0;
+    text-align: center;
+    line-height: normal;
+    margin: 0;
+    font-size: .9em;
+}
+fieldset 
+{
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid Navy;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset label 
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 0px 4px 8px 4px;
+}
+
+input[type="text"] 
+{
+    border: 1px solid #CCCCCC;
+    width:150px;
+}
+
+input[type="password"] 
+{
+    border: 1px solid #CCCCCC;
+    width:150px;
+}
+
+
+/* MISC  
+----------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+.error
+{
+    color:Red;
+}
+
+#menucontainer
+{
+    margin-top:34px;
+    margin-left:0px;
+}
+
+div#title
+{
+    display:block;
+    float:left;
+    text-align:left;
+}
+
+div#logo
+{
+    display:block;
+    float:left;
+    text-align:right;
+    position:absolute;
+    margin-right:0px;
+    margin-top:0px;
+}
+
+#logindisplay
+{
+    font-size:1.1em;
+    display:block;
+    text-align:right;
+    margin:10px;
+    color:White;
+}
+
+#logindisplay a:link
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+/************* Set FieldSet Tag Color **********************/
+fieldset 
+{
+border: 1px solid #black;
+}
+.NormalBlack
+{
+	font-family: Arial,Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    color:black;
+}
+.TopDiv
+{
+	background:#E8EEF4;
+}
+.MiddleDiv
+{
+	background: #FFFFFF;
+}
+
+.TextBoxProperty
+{
+    width:50px;
+    height:20px;
+}
+
+.RedStar
+{
+    color:Red;    
+}
+/*********************************************************/
+
+
+/******************  Text Style **************************/
+/* text style used for checkboxes in the admin and edit pages, for Nav compatibility */
+.NormalButton
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    text-indent: -5px;
+/*    border-style: solid;
+    border-width: 1px;
+    border-color: #cccc99; */
+    background-color:#ccccaa;    
+}
+
+.NormalRed
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: red;
+}
+
+.NormalBold
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 10px;
+    color:black;    
+}
+
+.NormalItalic
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+.NormalFooter
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight:bold;
+    color:black;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    font-size: 2.5em;
+    font-family:  Times New Roman, sans-serif, Arial, Helvetica;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-style:italic;
+    font-weight:normal;
+}
+h2
+{
+    padding: 0 0 10px 0;
+}
+h3
+{
+    font-size: 1.2em;
+}
+h4
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+h5, h6
+{
+    font-size: 1em;
+}
+.Heading2,.Heading1,Heading3,Heading4,Heading5
+{
+	font-size: 1.5em;
+    color: black;
+    font-family:  Times New Roman, sans-serif, Arial, Helvetica;
+}
+.Heading1
+{
+	  font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.Heading1
+{
+	padding: 0 0 10px 0;
+}
+.Heading3
+{
+     font-size: 2em;
+     font-family: Times New Roman, sans-serif, Arial, Helvetica;
+     font-style:italic;
+	 font-weight:normal;
+}
+.Heading4
+{
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: Verdana, Times New Roman, sans-serif, Arial, Helvetica; 
+    padding: 2px 0px 8px 0px;
+}
+.LastTableRow
+{
+    font-size: 1.1em;
+    font-weight: 400;
+    padding: 2px 0px 8px 0px;
+    font-style:italic;
+    font-weight:normal;
+    }
+.Heading5
+{
+    font-size: 1em;
+}
+.Heading6
+{
+    font-size: 0.90em;
+    font-weight:bold;
+}
+.BlueHeading
+{
+    font-size: 1.1em;
+    color : Blue;
+    font-weight:bold;
+}
+/****************** Div Table     *************************/
+.div-table{display:table; }
+.div-table-caption{display:table-caption; }
+.div-table-row{display:table-row;}
+.div-table-col{display:table-cell; padding: 0px;}
+
+/******************** Div Curve property   ***************/
+
+.container {
+background:#F2F7FA;
+color:#fff;
+margin:0 0;
+
+}
+.rtop, .rbottom{
+display:block;
+background:#fff;
+}
+.rtop *, .rbottom *{
+display: block;
+height: 1px;
+overflow: hidden;
+background:#F2F7FA;
+}
+.r1{margin: 0 5px}
+.r2{margin: 0 3px}
+.r3{margin: 0 2px}
+.r4{margin: 0 1px; height: 2px}
+
+/*************** End Div Curve Property *****************/
+
+/*************** Table Properties    ********************/
+
+ .TranscriptTable
+ {
+    width:100%;
+    border-color:Black;
+    border:1;    
+ }
+ .HeadRow
+ {
+    background-color:#F2F7FA;
+  }
+.TablePadding
+{
+    padding : 4px 4px 4px 4px;
+} 
+
+/*************** End Table Properties    ****************/
+
+
+
+/*******************  End Text Style *********************/
+

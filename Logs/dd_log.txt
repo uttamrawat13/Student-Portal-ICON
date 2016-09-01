@@ -1,0 +1,32 @@
+2015-12-14 14:52:15,956 [13] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'uttamrawat13' has logged in.
+2015-12-14 14:52:27,629 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'uttamrawat13' has logged out.
+2015-12-14 14:59:29,228 [11] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'uttamrawat13' has logged in.
+2015-12-14 15:12:22,085 [8] WARN  DiamondD.Web.Controllers.Filters.RequiresRoleAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A user  tried to view '/Reports.mvc/PaymentSchedule' but he wasn't allowed to access it.
+2015-12-14 15:12:56,358 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'uttamrawat13' has logged in.
+2015-12-14 15:13:51,600 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-12-14 15:20:57,495 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:uttamrawat13, password:uttam123'
+2015-12-14 15:21:12,737 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'uttamrawat13' has logged in.
+2015-12-14 15:21:58,400 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'uttamrawat13' has logged in.
+2015-12-14 15:22:15,707 [8] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'uttamrawat13' has logged out.
+2015-12-14 15:22:22,679 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-12-14 15:31:49,380 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:uttamrawat13, password:uttam123
+2015-12-14 15:32:09,290 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:uttamrawat13, password:uttam123
+2015-12-14 15:32:49,463 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:uttamrawat13, password:uttam123
+2015-12-14 17:14:20,446 [8] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - No such user with credentials : userName:tina, password:abc123
+2015-12-14 17:14:32,417 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'test' has logged in.
+2015-12-14 17:15:37,100 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'test' has logged in.
+2015-12-14 17:16:42,619 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'test' has logged in.
+2015-12-14 17:24:35,012 [15] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'test' has logged out.
+2015-12-14 17:29:18,459 [10] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'test' has logged in.
+2015-12-14 17:29:43,209 [8] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception occurred in Admin Settings (id)ct
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlSettingsRepository.GetSetting(String settingName) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlSettingsRepository.cs:line 86
+   at DiamondD.Data.DataAccess.Repositories.SqlSettingsRepository.GetForgetUsernameSetting() in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlSettingsRepository.cs:line 55
+   at DiamondD.Services.Settings.SettingsService.GetForgetUsernameSetting() in f:\Projects\DiamondStudentPortal\DiamondD.Services\Settings\SettingsService.cs:line 170
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.Settings.SettingsService.GetForgetUsernameSetting() in f:\Projects\DiamondStudentPortal\DiamondD.Services\Settings\SettingsService.cs:line 179
+   at DiamondD.Web.Controllers.UserController.GetWebInformation() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 804
+   at DiamondD.Web.Controllers.UserController.AdminSettings(String id) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 867
+2015-12-14 17:34:08,841 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'test' has logged in.
+2015-12-14 17:34:31,148 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'test' has logged out.
+2015-12-14 17:35:01,654 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'test' has logged in.

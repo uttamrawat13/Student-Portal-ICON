@@ -1,0 +1,1636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{733B09AB-1470-45CE-A29B-D334D3070706}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DiamondD.Web</RootNamespace>
+    <AssemblyName>DiamondD.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <IncludeAppPool>true</IncludeAppPool>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <PublishDatabases>false</PublishDatabases>
+    <DeployEncryptKey>Encryption password is used only if any deployment setting is marked as secure</DeployEncryptKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Lib.Web.Mvc, Version=6.2.1.0, Culture=neutral, PublicKeyToken=92212eec0425916e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Lib.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="RouteDebug, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\RouteDebug.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\GridOptions.cs" />
+    <Compile Include="Common\JsonModelBinder.cs" />
+    <Compile Include="Common\Logging\ILog.cs" />
+    <Compile Include="Common\Logging\Logger.cs" />
+    <Compile Include="Common\PagingSorting.cs" />
+    <Compile Include="Common\ResponseMessage.cs" />
+    <Compile Include="Controllers\EnrollmentController.cs" />
+    <Compile Include="Controllers\Filters\RequiresRoleAttribute.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\SharedController.cs" />
+    <Compile Include="Controllers\SurveyController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controls\AdminMenuControl.ascx.cs">
+      <DependentUpon>AdminMenuControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdminMenuControl.ascx.designer.cs">
+      <DependentUpon>AdminMenuControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HeaderControl.ascx.cs">
+      <DependentUpon>HeaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\HeaderControl.ascx.designer.cs">
+      <DependentUpon>HeaderControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FooterControl.ascx.cs">
+      <DependentUpon>FooterControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FooterControl.ascx.designer.cs">
+      <DependentUpon>FooterControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainMenuControl.ascx.cs">
+      <DependentUpon>MainMenuControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MainMenuControl.ascx.designer.cs">
+      <DependentUpon>MainMenuControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StudentMenuControl.ascx.cs">
+      <DependentUpon>StudentMenuControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StudentMenuControl.ascx.designer.cs">
+      <DependentUpon>StudentMenuControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SurveyAdminMenuControl.ascx.cs">
+      <DependentUpon>SurveyAdminMenuControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SurveyAdminMenuControl.ascx.designer.cs">
+      <DependentUpon>SurveyAdminMenuControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controllers\Filters\RequiresAuthentication.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AppHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\QuestionGroupsGridViewModel.cs" />
+    <Compile Include="ViewModels\QuestionsGridViewModel.cs" />
+    <Compile Include="ViewModels\SelectedStudentsGridViewModel.cs" />
+    <Compile Include="ViewModels\SurveyGridViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModels\SurveyStudentGridViewModel.cs" />
+    <Compile Include="Views\Shared\CustomGrid.ascx.cs">
+      <DependentUpon>CustomGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\CustomGrid.ascx.designer.cs">
+      <DependentUpon>CustomGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Survey\PartialCreateQuestionGroup.ascx.cs">
+      <DependentUpon>PartialCreateQuestionGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Survey\PartialCreateQuestionGroup.ascx.designer.cs">
+      <DependentUpon>PartialCreateQuestionGroup.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\DiamondD.Data.dll" />
+    <Content Include="bin\DiamondD.Data.pdb" />
+    <Content Include="bin\DiamondD.Services.dll" />
+    <Content Include="bin\DiamondD.Services.pdb" />
+    <Content Include="bin\DiamondD.Web.dll" />
+    <Content Include="bin\DiamondD.Web.pdb" />
+    <Content Include="bin\es-US\DiamondD.Web.resources.dll" />
+    <Content Include="bin\Lib.Web.Mvc.dll" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Data.pdb" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Data.xml" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="bin\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Interception.Configuration.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="bin\RouteDebug.dll" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="Content\CSS\calendar.css" />
+    <Content Include="Content\CSS\creditly.css" />
+    <Content Include="Content\CSS\creditly.html" />
+    <Content Include="Content\CSS\creditly.js" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\CSS\jq-ui\ui-lightness\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Content\CSS\jquery.multiselect.css" />
+    <Content Include="Content\CSS\payment.css" />
+    <Content Include="Content\CSS\Survey.css" />
+    <Content Include="Content\CSS\Menu.css" />
+    <Content Include="Content\CSS\ui.jqgrid.css" />
+    <Content Include="Content\Images\cal-img\cal.gif" />
+    <Content Include="Content\Images\cal-img\next_mon.gif" />
+    <Content Include="Content\Images\cal-img\next_year.gif" />
+    <Content Include="Content\Images\cal-img\no_cal.gif" />
+    <Content Include="Content\Images\cal-img\pixel.gif" />
+    <Content Include="Content\Images\cal-img\prev_mon.gif" />
+    <Content Include="Content\Images\cal-img\prev_year.gif" />
+    <Content Include="Content\Images\cal-img\shade_bl.png" />
+    <Content Include="Content\Images\cal-img\shade_bm.png" />
+    <Content Include="Content\Images\cal-img\shade_br.png" />
+    <Content Include="Content\Images\cal-img\shade_mr.png" />
+    <Content Include="Content\Images\cal-img\shade_tr.png" />
+    <Content Include="Content\Images\check.png" />
+    <Content Include="Content\Images\DDlogo_FullColor.png" />
+    <Content Include="Content\Images\first.png" />
+    <Content Include="Content\Images\last.png" />
+    <Content Include="Content\Images\LogoImages\14082012-191720-DDLogoColor.png" />
+    <Content Include="Content\Images\LogoImages\18062013-142016-SchoolLogo.png" />
+    <Content Include="Content\Images\LogoImages\corner_logo.png" />
+    <Content Include="Content\Images\next.png" />
+    <Content Include="Content\Images\pay_now.gif" />
+    <Content Include="Content\Images\prev.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Controls\HeaderControl.ascx" />
+    <Content Include="Controls\SurveyAdminMenuControl.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Logs\dd_log.txt" />
+    <Content Include="obj\Debug\DiamondD.Web.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DiamondD.Web.dll" />
+    <Content Include="obj\Debug\DiamondD.Web.pdb" />
+    <Content Include="obj\Debug\es-US\DiamondD.Web.resources.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\DiamondD.Data.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\DiamondD.Services.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\DiamondD.Web.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\es-US\DiamondD.Web.resources.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\Lib.Web.Mvc.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\log4net.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\Microsoft.Practices.Unity.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\Microsoft.Practices.Unity.Interception.Configuration.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\RouteDebug.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\System.Web.Helpers.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\System.Web.Razor.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\System.Web.WebPages.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\calendar.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jq-ui\ui-lightness\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\jquery.multiselect.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\Menu.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\Site.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\Survey.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\CSS\ui.jqgrid.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\ButtomImage.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\cal-img\cal.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\cal-img\next_mon.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\cal-img\next_year.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\cal-img\no_cal.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\cal-img\pixel.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\cal-img\prev_mon.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\cal-img\prev_year.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\cal-img\shade_bl.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\cal-img\shade_bm.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\cal-img\shade_br.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\cal-img\shade_mr.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\cal-img\shade_tr.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\CenterLine.jpg" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\check.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\corner_logo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\corner_logo_shadow.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\first.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\last.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\LeftLine.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\Line.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\LogoImages\14082012-191720-DDLogoColor.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\LogoImages\18062013-142016-SchoolLogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\LogoImages\corner_logo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\next.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\prev.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\Images\TopImage.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery-ui.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\AdminMenuControl.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\FooterControl.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\HeaderControl.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\MainMenuControl.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\StudentMenuControl.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\SurveyAdminMenuControl.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Default.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Global.asax" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Logout.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\calendar_us.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\grid.locale-en.js" />
+    <None Include="bin\DiamondD.Web.dll.config" />
+    <None Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-1.3.2.js" />
+    <None Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-1.3.2.min-vsdoc.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-1.3.2.min.js" />
+    <None Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-1.7.1.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-1.7.1.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-1.9.1.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery.jqGrid-4.1.2.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery.jqGrid-4.4.1.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery.jqGrid.columnFormaters.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery.jqGrid.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery.multiselect.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery.multiselect.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery.validate.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery.validate.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\livevalidation.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\MicrosoftAjax.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\modernizr-2.5.3.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Enrollment\Enroll.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\AcademicReview.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\AcademicReviewByTerm.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\AttendanceReview.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\AttendanceSummary.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\CosmetologyGradeBookLabs.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\CosmetologyGradeBookSummary.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\CosmetologyGradeBookTests.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\FinancialAidAwards.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\GradeBook.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\PaymentSchedule.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\ProgramCourseProgress.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\ScheduleOfCourses.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\Student1098TPdf.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\StudentLedger.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\CustomGrid.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\Reply.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\Result.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\UnauthorizedAccess.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Survey\CourseSurveySchedule.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Survey\CreateQuestionsGroup.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Survey\CreateSurvey.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Survey\MasterQuestions.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Survey\MasterQuestionsGroup.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Survey\MasterSurvey.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Survey\PartialCreateQuestionGroup.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Survey\StudentSelectionSurvey.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Survey\_ListQuestionGroup.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\AdminSettings.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\AskSecretQuestion.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\ForgotUserName.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\Home.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\Login.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\Register.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\ResendActivateAccount.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\ResetPassword.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\Rights.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\UserSettings.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\App_global.asax.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\App_global.asax.pdb" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\DiamondD.Data.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\DiamondD.Services.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\DiamondD.Web.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\es-US\DiamondD.Web.resources.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\Lib.Web.Mvc.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\log4net.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\Microsoft.Practices.Unity.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\Microsoft.Practices.Unity.Interception.Configuration.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\RouteDebug.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\System.Web.Helpers.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\System.Web.Razor.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\System.Web.WebPages.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\calendar.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jq-ui\ui-lightness\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\jquery.multiselect.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\Menu.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\Site.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\Survey.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\CSS\ui.jqgrid.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\ButtomImage.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\cal-img\cal.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\cal-img\next_mon.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\cal-img\next_year.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\cal-img\no_cal.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\cal-img\pixel.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\cal-img\prev_mon.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\cal-img\prev_year.gif" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\cal-img\shade_bl.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\cal-img\shade_bm.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\cal-img\shade_br.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\cal-img\shade_mr.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\cal-img\shade_tr.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\CenterLine.jpg" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\check.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\corner_logo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\corner_logo_shadow.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\first.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\last.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\LeftLine.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\Line.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\LogoImages\14082012-191720-DDLogoColor.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\LogoImages\18062013-142016-SchoolLogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\LogoImages\corner_logo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\next.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\prev.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\Images\TopImage.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery-ui.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\AdminMenuControl.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\FooterControl.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\HeaderControl.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\MainMenuControl.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\StudentMenuControl.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\SurveyAdminMenuControl.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Default.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Logout.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\calendar_us.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\grid.locale-en.js" />
+    <None Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-1.3.2.js" />
+    <None Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-1.3.2.min-vsdoc.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-1.3.2.min.js" />
+    <None Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-1.7.1.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-1.7.1.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-1.9.1.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery.jqGrid-4.1.2.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery.jqGrid-4.4.1.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery.jqGrid.columnFormaters.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery.jqGrid.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery.multiselect.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery.multiselect.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery.validate.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery.validate.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\livevalidation.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\MicrosoftAjax.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\modernizr-2.5.3.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Enrollment\Enroll.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\AcademicReview.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\AcademicReviewByTerm.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\AttendanceReview.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\AttendanceSummary.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\CosmetologyGradeBookLabs.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\CosmetologyGradeBookSummary.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\CosmetologyGradeBookTests.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\FinancialAidAwards.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\GradeBook.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\PaymentSchedule.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\ProgramCourseProgress.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\ScheduleOfCourses.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\Student1098TPdf.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\StudentLedger.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\CustomGrid.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\Reply.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\Result.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\UnauthorizedAccess.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Survey\CourseSurveySchedule.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Survey\CreateQuestionsGroup.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Survey\CreateSurvey.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Survey\MasterQuestions.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Survey\MasterQuestionsGroup.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Survey\MasterSurvey.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Survey\PartialCreateQuestionGroup.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Survey\StudentSelectionSurvey.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Survey\_ListQuestionGroup.ascx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\AdminSettings.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\AskSecretQuestion.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\ForgotUserName.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\Home.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\Login.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\Register.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\ResendActivateAccount.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\ResetPassword.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\Rights.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\UserSettings.aspx" />
+    <Content Include="obj\Release\AssemblyInfo\AssemblyInfo.dll" />
+    <Content Include="obj\Release\DiamondD.Web.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\DiamondD.Web.dll" />
+    <Content Include="obj\Release\DiamondD.Web.pdb" />
+    <Content Include="obj\Release\es-US\DiamondD.Web.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\App_global.asax.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\App_global.asax.pdb" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\DiamondD.Data.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\DiamondD.Services.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\DiamondD.Web.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\es-US\DiamondD.Web.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Lib.Web.Mvc.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\log4net.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.Practices.Unity.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.Practices.Unity.Interception.Configuration.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\RouteDebug.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\System.Web.Helpers.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\System.Web.Razor.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\System.Web.WebPages.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\calendar.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jq-ui\ui-lightness\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\jquery.multiselect.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\Menu.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\Site.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\Survey.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\CSS\ui.jqgrid.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\ButtomImage.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\cal-img\cal.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\cal-img\next_mon.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\cal-img\next_year.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\cal-img\no_cal.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\cal-img\pixel.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\cal-img\prev_mon.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\cal-img\prev_year.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\cal-img\shade_bl.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\cal-img\shade_bm.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\cal-img\shade_br.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\cal-img\shade_mr.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\cal-img\shade_tr.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\CenterLine.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\check.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\corner_logo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\corner_logo_shadow.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\first.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\last.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\LeftLine.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\Line.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\LogoImages\14082012-191720-DDLogoColor.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\LogoImages\18062013-142016-SchoolLogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\LogoImages\corner_logo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\next.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\prev.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\Images\TopImage.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery-ui.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\AdminMenuControl.ascx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\FooterControl.ascx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\HeaderControl.ascx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\MainMenuControl.ascx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\StudentMenuControl.ascx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\SurveyAdminMenuControl.ascx" />
+    <Content Include="obj\Release\Package\PackageTmp\Default.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Logout.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\calendar_us.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\grid.locale-en.js" />
+    <None Include="obj\Release\Package\PackageTmp\Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery-1.3.2.js" />
+    <None Include="obj\Release\Package\PackageTmp\Scripts\jquery-1.3.2.min-vsdoc.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery-1.3.2.min.js" />
+    <None Include="obj\Release\Package\PackageTmp\Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery-1.7.1.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery-1.7.1.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery-1.9.1.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery.jqGrid-4.1.2.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery.jqGrid-4.4.1.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery.jqGrid.columnFormaters.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery.jqGrid.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery.multiselect.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery.multiselect.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="obj\Release\Package\PackageTmp\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery.validate.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery.validate.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\livevalidation.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\MicrosoftAjax.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\modernizr-2.5.3.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Enrollment\Enroll.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\AcademicReview.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\AcademicReviewByTerm.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\AttendanceReview.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\AttendanceSummary.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\CosmetologyGradeBookLabs.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\CosmetologyGradeBookSummary.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\CosmetologyGradeBookTests.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\FinancialAidAwards.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\GradeBook.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\PaymentSchedule.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\ProgramCourseProgress.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\ScheduleOfCourses.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\Student1098TPdf.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\StudentLedger.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\CustomGrid.ascx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\Reply.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\Result.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\UnauthorizedAccess.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Survey\CourseSurveySchedule.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Survey\CreateQuestionsGroup.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Survey\CreateSurvey.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Survey\MasterQuestions.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Survey\MasterQuestionsGroup.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Survey\MasterSurvey.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Survey\PartialCreateQuestionGroup.ascx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Survey\StudentSelectionSurvey.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Survey\_ListQuestionGroup.ascx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\AdminSettings.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\AskSecretQuestion.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\ForgotUserName.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\Home.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\Login.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\Register.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\ResendActivateAccount.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\ResetPassword.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\Rights.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\UserSettings.aspx" />
+    <Content Include="obj\Release\_WPPLastBuildInfo.txt" />
+    <Content Include="Scripts\calendar_us.js" />
+    <Content Include="Scripts\creditly.js" />
+    <Content Include="Scripts\grid.locale-en.js" />
+    <Content Include="Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <Content Include="Scripts\jquery-1.3.2.min-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.1.2.min.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.4.1.js" />
+    <Content Include="Scripts\jquery.jqGrid.columnFormaters.js" />
+    <Content Include="Scripts\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\jquery.multiselect.js" />
+    <Content Include="Scripts\jquery.multiselect.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\livevalidation.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\non-empty.js" />
+    <Content Include="Views\Reports\AcademicReview.aspx" />
+    <Content Include="Views\Reports\AcademicReviewByTerm.aspx" />
+    <Content Include="Views\Reports\AttendanceSummary.aspx" />
+    <Content Include="Views\Reports\FinancialAidAwards.aspx" />
+    <Content Include="Views\Reports\CosmetologyGradeBookLabs.aspx" />
+    <Content Include="Views\Reports\CosmetologyGradeBookSummary.aspx" />
+    <Content Include="Views\Reports\CosmetologyGradeBookTests.aspx" />
+    <Content Include="Views\Reports\GradeBook.aspx" />
+    <Content Include="Views\User\PaymentExecution.aspx" />
+    <Content Include="Views\User\PaymentProcess.aspx" />
+    <Content Include="Views\User\PaymentReceipt.aspx" />
+    <Content Include="Views\Reports\ProgramCourseProgress.aspx" />
+    <Content Include="Views\Reports\ScheduleOfCourses.aspx" />
+    <Content Include="Views\Reports\Student1098TPdf.aspx" />
+    <Content Include="Views\Reports\StudentLedger.aspx" />
+    <Content Include="Views\Shared\CustomGrid.ascx" />
+    <Content Include="Views\Shared\Reply.aspx" />
+    <Content Include="Views\Shared\Result.aspx" />
+    <Content Include="Views\Shared\UnauthorizedAccess.aspx" />
+    <Content Include="Views\Enrollment\Enroll.aspx" />
+    <Content Include="Views\Survey\CourseSurveySchedule.aspx" />
+    <Content Include="Views\Survey\CreateQuestionsGroup.aspx" />
+    <Content Include="Views\Survey\CreateSurvey.aspx" />
+    <Content Include="Views\Survey\MasterQuestions.aspx" />
+    <Content Include="Views\Survey\MasterQuestionsGroup.aspx" />
+    <Content Include="Views\Survey\MasterSurvey.aspx" />
+    <Content Include="Views\Survey\PartialCreateQuestionGroup.ascx" />
+    <Content Include="Views\Survey\StudentSelectionSurvey.aspx" />
+    <Content Include="Views\Survey\_ListQuestionGroup.ascx" />
+    <Content Include="Views\User\AdminSettings.aspx" />
+    <Content Include="Views\User\AskSecretQuestion.aspx" />
+    <Content Include="Views\User\ForgotUserName.aspx" />
+    <Content Include="Views\User\Home.aspx" />
+    <Content Include="Views\User\Register.aspx" />
+    <Content Include="Views\User\Rights.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\CSS\Site.css" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DiamondD.Data\DiamondD.Data.csproj">
+      <Project>{2CFA66F8-C619-4091-A56A-CFD5F9F477A5}</Project>
+      <Name>DiamondD.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DiamondD.Services\DiamondD.Services.csproj">
+      <Project>{6C21D24C-628C-4F77-B5BE-42E84C3BA124}</Project>
+      <Name>DiamondD.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\ButtomImage.png" />
+    <Content Include="Content\Images\CenterLine.jpg" />
+    <Content Include="Content\Images\corner_logo.png" />
+    <Content Include="Content\Images\corner_logo_shadow.png" />
+    <Content Include="Content\Images\LeftLine.png" />
+    <Content Include="Content\Images\Line.png" />
+    <Content Include="Content\Images\TopImage.png" />
+    <Content Include="Controls\FooterControl.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\AdminMenuControl.ascx" />
+    <Content Include="Controls\MainMenuControl.ascx" />
+    <Content Include="Controls\StudentMenuControl.ascx" />
+    <Content Include="Views\Reports\AttendanceReview.aspx" />
+    <Content Include="Views\Reports\PaymentSchedule.aspx" />
+    <Content Include="Views\Shared\General.Master" />
+    <Content Include="Views\User\Login.aspx" />
+    <Content Include="Views\User\ResendActivateAccount.aspx" />
+    <Content Include="Views\User\ResetPassword.aspx" />
+    <Content Include="Views\User\UserSettings.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\Login.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\Register.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\Login.aspx.pt-BR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\Login.aspx.es-US.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\Register.aspx.pt-BR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\Register.aspx.es-US.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\ResendActivateAccount.aspx.resx">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\ResetPassword.aspx.resx">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\ResetPassword.aspx.pt-BR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\ResetPassword.aspx.es-US.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\ResendActivateAccount.aspx.pt-BR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\ResendActivateAccount.aspx.es-US.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Default.aspx.es-US.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Default.aspx.br-PT.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\UserSettings.aspx.resx">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\App_LocalResources\StudentMenuControl.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\App_LocalResources\StudentMenuControl.ascx.es-US.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Controls\App_LocalResources\FooterControl.ascx.resx">
+    </Content>
+    <Content Include="Controls\App_LocalResources\AdminMenuControl.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Controls\App_LocalResources\AdminMenuControl.aspx.es-US.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Controls\App_LocalResources\AdminMenuControl.ascx.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="Controls\App_LocalResources\FooterControl.ascx.es-US.resx" />
+    <Content Include="Views\Reports\App_LocalResources\AttendanceReview.aspx.resx">
+    </Content>
+    <Content Include="Views\Reports\App_LocalResources\AttendanceReview.aspx.es-US.resx">
+    </Content>
+    <Content Include="Views\Reports\App_LocalResources\AttendanceReview.aspx.pt-BR.resx">
+    </Content>
+    <Content Include="Views\Reports\App_LocalResources\PaymentSchedule.aspx.resx">
+    </Content>
+    <Content Include="Views\Reports\App_LocalResources\PaymentSchedule.aspx.es-US.resx">
+    </Content>
+    <Content Include="Views\Reports\App_LocalResources\PaymentSchedule.aspx.pt-BR.resx">
+    </Content>
+    <Content Include="Controls\App_LocalResources\FooterControl.ascx.pt-BR.resx" />
+    <Content Include="Controls\App_LocalResources\StudentMenuControl.ascx.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Reports\App_LocalResources\AttendanceSummary.aspx.resx" />
+    <Content Include="Views\Reports\App_LocalResources\AttendanceSummary.aspx.es-US.resx" />
+    <Content Include="Views\Reports\App_LocalResources\AttendanceSummary.aspx.pt-BR.resx" />
+    <Content Include="Views\Reports\App_LocalResources\StudentLedger.aspx.resx" />
+    <Content Include="Views\Reports\App_LocalResources\StudentLedger.aspx.es-US.resx" />
+    <Content Include="Views\Reports\App_LocalResources\StudentLedger.aspx.pt-BR.resx" />
+    <Content Include="Views\Reports\App_LocalResources\CosmetologyGradeBookLabs.aspx.resx" />
+    <Content Include="Views\Reports\App_LocalResources\CosmetologyGradeBookLabs.aspx.es-US.resx" />
+    <Content Include="Views\Reports\App_LocalResources\CosmetologyGradeBookLabs.aspx.pt-BR.resx" />
+    <Content Include="Views\Reports\App_LocalResources\CosmetologyGradeBookSummary.aspx.resx" />
+    <Content Include="Views\Reports\App_LocalResources\CosmetologyGradeBookSummary.aspx.es-US.resx" />
+    <Content Include="Views\Reports\App_LocalResources\CosmetologyGradeBookSummary.aspx.pt-BR.resx" />
+    <Content Include="Views\Reports\App_LocalResources\CosmetologyGradeBookTests.aspx.resx" />
+    <Content Include="Views\Reports\App_LocalResources\CosmetologyGradeBookTests.aspx.es-US.resx" />
+    <Content Include="Views\Reports\App_LocalResources\CosmetologyGradeBookTests.aspx.pt-BR.resx" />
+    <Content Include="Views\Reports\App_LocalResources\ProgramCourseProgress.aspx.resx" />
+    <Content Include="Views\Reports\App_LocalResources\ProgramCourseProgress.aspx.pt-BR.resx" />
+    <Content Include="Views\Reports\App_LocalResources\ProgramCourseProgress.aspx.es-US.resx" />
+    <Content Include="Views\Reports\App_LocalResources\ScheduleOfCourses.aspx.resx" />
+    <Content Include="Views\Reports\App_LocalResources\ScheduleOfCourses.aspx.es-US.resx" />
+    <Content Include="Views\Reports\App_LocalResources\ScheduleOfCourses.aspx.pt-BR.resx" />
+    <Content Include="Views\User\App_LocalResources\AdminSettings.aspx.resx" />
+    <Content Include="Views\User\App_LocalResources\AdminSettings.aspx.es-US.resx" />
+    <Content Include="Views\User\App_LocalResources\AdminSettings.aspx.pt-BR.resx" />
+    <Content Include="Views\User\App_LocalResources\AskSecretQuestion.aspx.resx" />
+    <Content Include="Views\User\App_LocalResources\AskSecretQuestion.aspx.pt-BR.resx" />
+    <Content Include="Views\User\App_LocalResources\AskSecretQuestion.aspx.es-US.resx" />
+    <Content Include="Views\Shared\App_LocalResources\Reply.aspx.es-US.resx" />
+    <Content Include="Views\Shared\App_LocalResources\Reply.aspx.pt-BR.resx" />
+    <Content Include="Views\Shared\App_LocalResources\Reply.aspx.resx" />
+    <Content Include="Views\Shared\App_LocalResources\Result.aspx.es-ES.resx" />
+    <Content Include="Views\Shared\App_LocalResources\Result.aspx.pt-BR.resx" />
+    <Content Include="Views\Shared\App_LocalResources\Result.aspx.resx" />
+    <Content Include="Views\Shared\App_LocalResources\UnauthorizedAccess.aspx.es-US.resx" />
+    <Content Include="Views\Shared\App_LocalResources\UnauthorizedAccess.aspx.pt-BR.resx" />
+    <Content Include="Views\Shared\App_LocalResources\UnauthorizedAccess.aspx.resx" />
+    <Content Include="Views\Reports\App_LocalResources\AcademicReview.aspx.es-US.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Reports\App_LocalResources\AcademicReview.aspx.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Reports\App_LocalResources\AcademicReview.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Reports\App_LocalResources\AcademicReviewByTerm.aspx.es-US.resx" />
+    <Content Include="Views\Reports\App_LocalResources\AcademicReviewByTerm.aspx.pt-BR.resx" />
+    <Content Include="Views\Reports\App_LocalResources\AcademicReviewByTerm.aspx.resx" />
+    <Content Include="Views\User\App_LocalResources\Rights.aspx.es-US.resx" />
+    <Content Include="Views\User\App_LocalResources\Rights.aspx.pt-BR.resx" />
+    <Content Include="Views\User\App_LocalResources\Rights.aspx.resx" />
+    <Content Include="Views\Reports\App_LocalResources\FinancialAidAwards.aspx.resx" />
+    <Content Include="Views\Reports\App_LocalResources\FinancialAidAwards.aspx.pt-BR.resx" />
+    <Content Include="Views\Reports\App_LocalResources\FinancialAidAwards.aspx.es-US.resx" />
+    <Content Include="Views\Reports\App_LocalResources\GradeBook.aspx.es-US.resx" />
+    <Content Include="Views\Reports\App_LocalResources\GradeBook.aspx.pt-BR.resx" />
+    <Content Include="Views\Reports\App_LocalResources\GradeBook.aspx.resx" />
+    <Content Include="Views\Reports\App_LocalResources\Student1098TPdf.aspx.resx" />
+    <Content Include="Views\Reports\App_LocalResources\Student1098TPdf.aspx.es-US.resx" />
+    <Content Include="Views\Reports\App_LocalResources\Student1098TPdf.aspx.pt-BR.resx" />
+    <Content Include="Views\Enrollment\App_LocalResources\Enroll.aspx.es-US.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Enrollment\App_LocalResources\Enroll.aspx.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Enrollment\App_LocalResources\Enroll.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Controls\App_LocalResources\SurveyAdminMenuControl.ascx.resx" />
+    <Content Include="Controls\App_LocalResources\SurveyAdminMenuControl.ascx.pt-BR.resx" />
+    <Content Include="Controls\App_LocalResources\SurveyAdminMenuControl.ascx.es-US.resx" />
+    <EmbeddedResource Include="obj\Debug\DiamondD.Web.Controls.App_LocalResources.FooterControl.ascx.es-US.resources" />
+    <EmbeddedResource Include="obj\Debug\DiamondD.Web.Views.User.App_LocalResources.UserSettings.aspx.es-US.resources" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\App_LocalResources\Default.aspx.br-PT.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\App_LocalResources\Default.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\App_LocalResources\Default.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\App_LocalResources\AdminMenuControl.ascx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\App_LocalResources\AdminMenuControl.ascx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\App_LocalResources\AdminMenuControl.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\App_LocalResources\FooterControl.ascx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\App_LocalResources\FooterControl.ascx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\App_LocalResources\StudentMenuControl.ascx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\App_LocalResources\StudentMenuControl.ascx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\App_LocalResources\StudentMenuControl.ascx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\App_LocalResources\SurveyAdminMenuControl.ascx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\App_LocalResources\SurveyAdminMenuControl.ascx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Controls\App_LocalResources\SurveyAdminMenuControl.ascx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Enrollment\App_LocalResources\Enroll.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Enrollment\App_LocalResources\Enroll.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Enrollment\App_LocalResources\Enroll.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\AcademicReview.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\AcademicReview.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\AcademicReview.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\AcademicReviewByTerm.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\AcademicReviewByTerm.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\AcademicReviewByTerm.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\AttendanceReview.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\AttendanceReview.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\AttendanceReview.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\AttendanceSummary.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\AttendanceSummary.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\AttendanceSummary.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\CosmetologyGradeBookLabs.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\CosmetologyGradeBookLabs.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\CosmetologyGradeBookLabs.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\CosmetologyGradeBookSummary.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\CosmetologyGradeBookSummary.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\CosmetologyGradeBookSummary.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\CosmetologyGradeBookTests.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\CosmetologyGradeBookTests.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\CosmetologyGradeBookTests.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\FinancialAidAwards.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\FinancialAidAwards.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\FinancialAidAwards.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\GradeBook.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\GradeBook.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\GradeBook.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\PaymentSchedule.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\PaymentSchedule.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\PaymentSchedule.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\ProgramCourseProgress.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\ProgramCourseProgress.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\ProgramCourseProgress.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\ScheduleOfCourses.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\ScheduleOfCourses.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\ScheduleOfCourses.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\Student1098TPdf.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\Student1098TPdf.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\Student1098TPdf.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\StudentLedger.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\StudentLedger.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Reports\App_LocalResources\StudentLedger.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\App_LocalResources\Reply.aspx.es-US.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\App_LocalResources\Reply.aspx.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\App_LocalResources\Reply.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\App_LocalResources\Result.aspx.es-ES.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\App_LocalResources\Result.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\App_LocalResources\Result.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\App_LocalResources\UnauthorizedAccess.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\App_LocalResources\UnauthorizedAccess.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\App_LocalResources\UnauthorizedAccess.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\AdminSettings.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\AdminSettings.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\AdminSettings.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\AskSecretQuestion.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\AskSecretQuestion.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\AskSecretQuestion.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\Login.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\Login.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\Login.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\Register.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\Register.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\Register.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\ResendActivateAccount.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\ResendActivateAccount.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\ResendActivateAccount.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\ResetPassword.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\ResetPassword.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\ResetPassword.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\Rights.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\Rights.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\Rights.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\UserSettings.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\User\App_LocalResources\UserSettings.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\App_LocalResources\Default.aspx.br-PT.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\App_LocalResources\Default.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\App_LocalResources\Default.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\App_LocalResources\AdminMenuControl.ascx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\App_LocalResources\AdminMenuControl.ascx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\App_LocalResources\AdminMenuControl.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\App_LocalResources\FooterControl.ascx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\App_LocalResources\FooterControl.ascx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\App_LocalResources\StudentMenuControl.ascx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\App_LocalResources\StudentMenuControl.ascx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\App_LocalResources\StudentMenuControl.ascx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\App_LocalResources\SurveyAdminMenuControl.ascx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\App_LocalResources\SurveyAdminMenuControl.ascx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Controls\App_LocalResources\SurveyAdminMenuControl.ascx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Enrollment\App_LocalResources\Enroll.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Enrollment\App_LocalResources\Enroll.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Enrollment\App_LocalResources\Enroll.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\AcademicReview.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\AcademicReview.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\AcademicReview.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\AcademicReviewByTerm.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\AcademicReviewByTerm.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\AcademicReviewByTerm.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\AttendanceReview.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\AttendanceReview.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\AttendanceReview.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\AttendanceSummary.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\AttendanceSummary.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\AttendanceSummary.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\CosmetologyGradeBookLabs.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\CosmetologyGradeBookLabs.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\CosmetologyGradeBookLabs.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\CosmetologyGradeBookSummary.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\CosmetologyGradeBookSummary.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\CosmetologyGradeBookSummary.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\CosmetologyGradeBookTests.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\CosmetologyGradeBookTests.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\CosmetologyGradeBookTests.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\FinancialAidAwards.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\FinancialAidAwards.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\FinancialAidAwards.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\GradeBook.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\GradeBook.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\GradeBook.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\PaymentSchedule.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\PaymentSchedule.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\PaymentSchedule.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\ProgramCourseProgress.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\ProgramCourseProgress.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\ProgramCourseProgress.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\ScheduleOfCourses.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\ScheduleOfCourses.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\ScheduleOfCourses.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\Student1098TPdf.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\Student1098TPdf.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\Student1098TPdf.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\StudentLedger.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\StudentLedger.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Reports\App_LocalResources\StudentLedger.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\App_LocalResources\Reply.aspx.es-US.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\App_LocalResources\Reply.aspx.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\App_LocalResources\Reply.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\App_LocalResources\Result.aspx.es-ES.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\App_LocalResources\Result.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\App_LocalResources\Result.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\App_LocalResources\UnauthorizedAccess.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\App_LocalResources\UnauthorizedAccess.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\App_LocalResources\UnauthorizedAccess.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\AdminSettings.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\AdminSettings.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\AdminSettings.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\AskSecretQuestion.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\AskSecretQuestion.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\AskSecretQuestion.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\Login.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\Login.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\Login.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\Register.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\Register.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\Register.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\ResendActivateAccount.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\ResendActivateAccount.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\ResendActivateAccount.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\ResetPassword.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\ResetPassword.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\ResetPassword.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\Rights.aspx.es-US.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\Rights.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\Rights.aspx.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\UserSettings.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\User\App_LocalResources\UserSettings.aspx.resx" />
+    <EmbeddedResource Include="obj\Release\DiamondD.Web.Controls.App_LocalResources.FooterControl.ascx.es-US.resources" />
+    <EmbeddedResource Include="obj\Release\DiamondD.Web.Views.User.App_LocalResources.UserSettings.aspx.es-US.resources" />
+    <Content Include="obj\Release\Package\PackageTmp\App_LocalResources\Default.aspx.br-PT.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\App_LocalResources\Default.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\App_LocalResources\Default.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\App_LocalResources\AdminMenuControl.ascx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\App_LocalResources\AdminMenuControl.ascx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\App_LocalResources\AdminMenuControl.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\App_LocalResources\FooterControl.ascx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\App_LocalResources\FooterControl.ascx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\App_LocalResources\StudentMenuControl.ascx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\App_LocalResources\StudentMenuControl.ascx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\App_LocalResources\StudentMenuControl.ascx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\App_LocalResources\SurveyAdminMenuControl.ascx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\App_LocalResources\SurveyAdminMenuControl.ascx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Controls\App_LocalResources\SurveyAdminMenuControl.ascx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Enrollment\App_LocalResources\Enroll.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Enrollment\App_LocalResources\Enroll.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Enrollment\App_LocalResources\Enroll.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\AcademicReview.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\AcademicReview.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\AcademicReview.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\AcademicReviewByTerm.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\AcademicReviewByTerm.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\AcademicReviewByTerm.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\AttendanceReview.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\AttendanceReview.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\AttendanceReview.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\AttendanceSummary.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\AttendanceSummary.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\AttendanceSummary.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\CosmetologyGradeBookLabs.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\CosmetologyGradeBookLabs.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\CosmetologyGradeBookLabs.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\CosmetologyGradeBookSummary.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\CosmetologyGradeBookSummary.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\CosmetologyGradeBookSummary.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\CosmetologyGradeBookTests.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\CosmetologyGradeBookTests.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\CosmetologyGradeBookTests.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\FinancialAidAwards.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\FinancialAidAwards.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\FinancialAidAwards.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\GradeBook.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\GradeBook.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\GradeBook.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\PaymentSchedule.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\PaymentSchedule.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\PaymentSchedule.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\ProgramCourseProgress.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\ProgramCourseProgress.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\ProgramCourseProgress.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\ScheduleOfCourses.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\ScheduleOfCourses.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\ScheduleOfCourses.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\Student1098TPdf.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\Student1098TPdf.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\Student1098TPdf.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\StudentLedger.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\StudentLedger.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Reports\App_LocalResources\StudentLedger.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\App_LocalResources\Reply.aspx.es-US.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\App_LocalResources\Reply.aspx.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\App_LocalResources\Reply.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\App_LocalResources\Result.aspx.es-ES.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\App_LocalResources\Result.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\App_LocalResources\Result.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\App_LocalResources\UnauthorizedAccess.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\App_LocalResources\UnauthorizedAccess.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\App_LocalResources\UnauthorizedAccess.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\AdminSettings.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\AdminSettings.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\AdminSettings.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\AskSecretQuestion.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\AskSecretQuestion.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\AskSecretQuestion.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\Login.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\Login.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\Login.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\Register.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\Register.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\Register.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\ResendActivateAccount.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\ResendActivateAccount.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\ResendActivateAccount.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\ResetPassword.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\ResetPassword.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\ResetPassword.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\Rights.aspx.es-US.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\Rights.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\Rights.aspx.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\UserSettings.aspx.pt-BR.resx" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\User\App_LocalResources\UserSettings.aspx.resx" />
+    <EmbeddedResource Include="Views\User\App_LocalResources\UserSettings.aspx.es-US.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\App_LocalResources\UserSettings.aspx.pt-BR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_Start\" />
+    <Folder Include="bin\bin\es-US\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\ProfileTransformWebConfig\transformed\Views\" />
+    <Folder Include="obj\Release\TempPE\" />
+    <Folder Include="obj\Release\TransformWebConfig\transformed\Views\" />
+    <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DiamondD.Data.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Images\cal-img\Thumbs.db" />
+    <Content Include="packages.config" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\DiamondD.Web.csproj.GenerateResource.Cache" />
+    <Content Include="obj\Debug\DiamondD.Web.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\DiamondD.Data.config" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\packages.config" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\General.Master" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Shared\Site.Master" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Views\Web.config" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Web.config" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\App_global.asax.compiled" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\DiamondD.Data.config" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\packages.config" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\PrecompiledApp.config" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\General.Master" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Shared\Site.Master" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Views\Web.config" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Web.config" />
+    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Release\DiamondD.Web.csproj.GenerateResource.Cache" />
+    <Content Include="obj\Release\DiamondD.Web.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\App_global.asax.compiled" />
+    <Content Include="obj\Release\Package\PackageTmp\DiamondD.Data.config" />
+    <Content Include="obj\Release\Package\PackageTmp\packages.config" />
+    <Content Include="obj\Release\Package\PackageTmp\PrecompiledApp.config" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\General.Master" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\Site.Master" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Web.config" />
+    <Content Include="obj\Release\Package\PackageTmp\Web.config" />
+    <None Include="Properties\PublishProfiles\DevTestProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53811</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4322/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

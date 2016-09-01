@@ -1,0 +1,63 @@
+<%@ Import Namespace="DiamondD.Services.Settings" %>
+<%@ Import Namespace="DiamondD.Web.Helpers"%>
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Register TagPrefix="header" TagName="header" Src="~/Controls/HeaderControl.ascx" %>
+<%@ Register TagPrefix="footer" TagName="footer" Src="~/Controls/FooterControl.ascx" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="<%=Page.ResolveUrl(AppHelper.CssUrl("Site.css")) %>" rel="stylesheet" type="text/css" />
+    <link href="<%=Page.ResolveUrl(AppHelper.CssUrl("Menu.css")) %>" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="width100">
+    <center>
+    <div class="width100Height65px">
+           
+        <!-------------   Header Control ------------>
+        <div id="Div1" class="DivWidth1000pxLeft">
+            <div id="title">
+            <%
+                string imagesPath;
+                try
+                {
+                    ISettingsService settingsService = new SettingsService();
+                    string path = ConfigurationManager.AppSettings["logoPath"];
+
+                    imagesPath = ResolveClientUrl("~" + path) + settingsService.GetLogoFileName();
+
+                    ViewState["LogoFilePath"] = imagesPath;
+                }
+                catch (Exception)
+                {
+                    // Redirect to error page
+                    if (!Response.IsRequestBeingRedirected)
+                        Response.Redirect("Result/error");
+                } %>
+              <a href="<%= ResolveClientUrl("~" + "/User.mvc/Login")  %>" title="Home">
+              <img class="zeroBorder" src="<%= ViewState["LogoFilePath"] %>" Height="60px" Width="60px" alt="Logo" /></a>
+              </div>
+            <header:header ID="Header" runat="server" />
+            </div>
+            </div>
+        <div id="Div3" class="DivWidth1000pxCenterMiddle">
+        <div id="Div4">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+            
+            
+            <div id="Div5" class="DivColorCenter">
+            
+            <footer:footer ID="footer" runat="server" lblFooterCSSClass="Heading5" />
+            </div>
+        </div>
+        </div>
+        </center>
+    </div>
+    
+</body>
+</html>

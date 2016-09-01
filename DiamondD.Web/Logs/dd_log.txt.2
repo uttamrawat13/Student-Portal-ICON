@@ -1,0 +1,417 @@
+2015-09-26 12:06:05,241 [5] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlPaymentRepository.cs:line 25
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291
+2015-09-26 12:06:35,303 [11] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlPaymentRepository.cs:line 25
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291
+2015-09-26 12:06:35,982 [6] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlPaymentRepository.cs:line 25
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291
+2015-09-26 12:06:39,345 [11] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlPaymentRepository.cs:line 25
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291
+2015-09-26 12:06:47,042 [5] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlPaymentRepository.cs:line 25
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291
+2015-09-26 12:08:05,693 [11] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlPaymentRepository.cs:line 25
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291
+2015-09-26 12:08:32,996 [10] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-26 12:08:35,978 [10] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlPaymentRepository.cs:line 25
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291
+2015-09-26 12:09:17,235 [11] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlPaymentRepository.cs:line 25
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291
+2015-09-26 12:12:46,616 [11] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlPaymentRepository.cs:line 25
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291
+2015-09-26 12:12:47,277 [11] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 41
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlPaymentRepository.cs:line 25
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291
+2015-09-26 12:15:32,072 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-26 12:18:17,515 [7] ERROR DiamondD.Web.Controllers.ReportsController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred. StudentNo: 4365
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Invalid column name 'paymentdue'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 460
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 846
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 950
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteReader(IBaseRepository repository, CommandType commandType, String query)
+   at DiamondD.Data.DataAccess.Repositories.SqlPaymentRepository.GetPaymentSchedule(Int32 studentNo)
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 39
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.PaymentScheduleService.PaymentService.GetPaymentSchedule(Int32 studentNo) in f:\Projects\DiamondStudentPortal\DiamondD.Services\Payment\PaymentService.cs:line 43
+   at DiamondD.Web.Controllers.ReportsController.PaymentSchedule() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\ReportsController.cs:line 291
+2015-09-26 12:29:40,546 [8] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-26 12:31:25,470 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-26 12:33:33,089 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-28 11:29:26,486 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-28 13:05:40,677 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-28 14:51:46,872 [5] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-28 15:22:58,629 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-28 15:42:54,080 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-28 15:57:32,362 [11] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 16:05:49,154 [28] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 16:09:34,662 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-28 16:18:32,547 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-28 16:32:33,952 [9] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-28 16:51:35,626 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-28 16:52:25,748 [6] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 16:52:48,256 [6] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 16:54:15,472 [7] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 16:58:51,305 [7] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 16:59:24,123 [10] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 17:00:55,564 [10] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 17:01:58,538 [10] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 17:03:40,031 [10] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 17:03:58,294 [15] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 17:05:05,788 [10] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 17:05:20,348 [9] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged out.
+2015-09-28 17:08:10,372 [10] WARN  DiamondD.Web.Controllers.Filters.RequiresAuthenticationAttribute (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:38) - A User tried to view '/User.mvc/Logout' when he was not logged in.
+2015-09-28 17:16:49,817 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-28 17:19:38,015 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-28 17:25:12,940 [6] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.
+2015-09-28 17:25:19,109 [6] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 17:28:41,144 [13] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 17:33:15,955 [10] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 17:34:55,838 [11] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 17:34:59,410 [19] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 17:36:40,369 [11] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 17:38:39,592 [10] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception in UserController
+System.Exception: Some error occured on server side. Please try later. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DiamondD.Data.DataAccess.Repositories.SqlWebUserRepository.VerifyCredantials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlWebUserRepository.cs:line 18
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 34
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.User.WebUserService.VerifyCredentials(String userName, String password) in f:\Projects\DiamondStudentPortal\DiamondD.Services\User\WebUserService.cs:line 49
+   at DiamondD.Web.Controllers.UserController.Login(FormCollection collection) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 157
+2015-09-28 17:46:57,118 [7] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'tina' has logged in.

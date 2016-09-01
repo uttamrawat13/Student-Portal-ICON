@@ -1,0 +1,12 @@
+﻿
+CREATE TABLE [dbo].[WebReport](
+	[ReportId] [int] IDENTITY(1,1) NOT NULL,
+	[ReportName] [nvarchar](100) NULL,
+	[Active] [nvarchar](1) NULL,
+ CONSTRAINT [aaaaaWebReport_PK] PRIMARY KEY NONCLUSTERED 
+(
+	[ReportId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO

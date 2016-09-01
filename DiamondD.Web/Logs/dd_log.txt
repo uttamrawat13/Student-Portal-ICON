@@ -1,0 +1,97 @@
+2016-08-31 17:39:29,940 [6] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Unable to get Login Message.
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Login failed for user ''.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.GetNewOpenConnection() in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 1176
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.GetWrappedConnection() in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 1200
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.GetOpenConnection() in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 1191
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteScalar(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 995
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteScalar(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 1089
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteScalar(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 63
+   at DiamondD.Data.DataAccess.Repositories.SqlSettingsRepository.GetSetting(String settingName) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlSettingsRepository.cs:line 85
+   at DiamondD.Data.DataAccess.Repositories.SqlSettingsRepository.GetLoginMsgText() in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlSettingsRepository.cs:line 20
+   at DiamondD.Services.Settings.SettingsService.GetLoginMsgText() in f:\Projects\DiamondStudentPortal\DiamondD.Services\Settings\SettingsService.cs:line 53
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.Settings.SettingsService.GetLoginMsgText() in f:\Projects\DiamondStudentPortal\DiamondD.Services\Settings\SettingsService.cs:line 58
+   at DiamondD.Web.Controllers.UserController.Login() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 115
+2016-08-31 17:39:50,269 [9] ERROR DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Unable to get Login Message.
+System.Exception: Some error occured on server side. Please try later. ---> System.Data.SqlClient.SqlException: Login failed for user ''.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.GetNewOpenConnection() in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 1176
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.GetWrappedConnection() in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 1200
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.GetOpenConnection() in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 1191
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteScalar(DbCommand command) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 995
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteScalar(CommandType commandType, String commandText) in e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:line 1089
+   at DiamondD.Data.DataAccess.Repositories.SqlRepositoryUtils.ExecuteScalar(IBaseRepository repository, CommandType commandType, String query) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlRepositoryUtils.cs:line 63
+   at DiamondD.Data.DataAccess.Repositories.SqlSettingsRepository.GetSetting(String settingName) in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlSettingsRepository.cs:line 85
+   at DiamondD.Data.DataAccess.Repositories.SqlSettingsRepository.GetLoginMsgText() in f:\Projects\DiamondStudentPortal\DiamondD.Data\DataAccess\Repositories\SqlSettingsRepository.cs:line 20
+   at DiamondD.Services.Settings.SettingsService.GetLoginMsgText() in f:\Projects\DiamondStudentPortal\DiamondD.Services\Settings\SettingsService.cs:line 53
+   --- End of inner exception stack trace ---
+   at DiamondD.Services.Settings.SettingsService.GetLoginMsgText() in f:\Projects\DiamondStudentPortal\DiamondD.Services\Settings\SettingsService.cs:line 58
+   at DiamondD.Web.Controllers.UserController.Login() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\UserController.cs:line 115
+2016-08-31 17:42:29,509 [8] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'uttam' has logged in.
+2016-08-31 17:46:22,459 [8] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'uttam' has logged out.
+2016-08-31 17:46:25,873 [8] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'nmaranon' has logged in.
+2016-08-31 17:47:05,411 [8] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'nmaranon' has logged out.
+2016-08-31 17:47:16,709 [17] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'uttam' has logged in.
+2016-08-31 17:54:30,608 [31] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'uttam' has logged out.
+2016-08-31 17:54:38,954 [23] INFO  DiamondD.Web.Controllers.UserController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:28) - User 'nmaranon' has logged in.
+2016-08-31 19:05:27,686 [102] ERROR DiamondD.Web.Controllers.EnrollmentController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred while fetching terms for enrollment.
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at DiamondD.Web.Controllers.EnrollmentController.FetchTerms(Int32 pageNumber, Boolean showFirstTerm) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\EnrollmentController.cs:line 243
+   at DiamondD.Web.Controllers.EnrollmentController.Enroll() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\EnrollmentController.cs:line 34
+2016-08-31 19:05:27,706 [102] ERROR DiamondD.Web.Controllers.EnrollmentController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - StudentNo: 614
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at DiamondD.Web.Controllers.EnrollmentController.FetchTerms(Int32 pageNumber, Boolean showFirstTerm) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\EnrollmentController.cs:line 243
+   at DiamondD.Web.Controllers.EnrollmentController.Enroll() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\EnrollmentController.cs:line 34
+2016-08-31 19:05:39,365 [106] ERROR DiamondD.Web.Controllers.EnrollmentController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - Exception Occurred while fetching terms for enrollment.
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at DiamondD.Web.Controllers.EnrollmentController.FetchTerms(Int32 pageNumber, Boolean showFirstTerm) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\EnrollmentController.cs:line 243
+   at DiamondD.Web.Controllers.EnrollmentController.Enroll() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\EnrollmentController.cs:line 34
+2016-08-31 19:05:39,366 [106] ERROR DiamondD.Web.Controllers.EnrollmentController (f:\Projects\DiamondStudentPortal\DiamondD.Web\Common\Logging\Logger.cs:53) - StudentNo: 614
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at DiamondD.Web.Controllers.EnrollmentController.FetchTerms(Int32 pageNumber, Boolean showFirstTerm) in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\EnrollmentController.cs:line 243
+   at DiamondD.Web.Controllers.EnrollmentController.Enroll() in f:\Projects\DiamondStudentPortal\DiamondD.Web\Controllers\EnrollmentController.cs:line 34

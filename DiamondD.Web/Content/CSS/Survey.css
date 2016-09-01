@@ -1,0 +1,136 @@
+﻿.LV_validation_message{
+    font-weight:bold;
+    margin:0 0 0 5px;    
+}
+
+.LV_valid {
+    color:#00CC00;
+}
+	
+.LV_invalid {
+    color:#CC0000;
+}
+    
+.LV_valid_field,
+input.LV_valid_field:hover, 
+input.LV_valid_field:active,
+textarea.LV_valid_field:hover, 
+textarea.LV_valid_field:active {
+    border: 1px solid #00CC00;
+}
+    
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active {
+    border: 1px solid #CC0000;
+}
+
+.serverErrorMessage {
+    text-align:center;
+    color:red;
+}
+
+/*******************  Start Survey Module Styles *********************/
+.surveyfieldset
+{
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    padding: 0px;
+    min-width: 600px;
+}
+
+.surveyfieldset legend
+{
+    
+}
+.surveyfieldrow
+{  
+    text-align: justify;
+    padding: 10px 5px;
+}
+.leftOrientation
+{
+    padding: 10px;
+    text-align: left;
+    float:left;   
+}
+.verticalOrientation
+{
+    float:none;   
+}
+.checkBoxes{clear:both;/*margin-left: 137px;*/}
+.surveyfieldtitle
+{
+    display:inline-block;
+    width:190px;
+}
+
+.surveyfieldtext 
+{  
+    width: 250px !important;    
+}
+.surveyfieldcheckbox
+{
+    
+}
+.surveySubmit
+{
+    margin-right:5px;
+}
+.surveyCancel
+{
+    margin-right:5px;
+}
+    .surveyfieldrow label
+    {
+        padding:5px;
+        }
+.comment
+{
+            font-size:1em;
+            color:orange;
+            padding: 7px;   
+}
+
+.inlinelabel
+{
+    display:inline;
+}
+.MainHeadingSpan
+{
+    display: inline-block;        
+    padding: 5px 0;
+    width: 100%;
+}
+.MainHeadingSpan h1{ margin:0 auto; text-align:center;}
+.TitleAndNewDiv
+{
+    padding: 5px;
+    text-align: left;
+    width: 600px;
+}
+.GridDiv
+{
+    
+}
+
+.NewLinkSpan
+{
+    display: inline-block;
+    margin: 0 120px 10px 0;
+    text-align: right;
+    width: 600px;
+}
+
+.hidden {
+            display:none;
+        }
+
+
+
+div.studentSelectionComboDiv  label {
+    width: 100px;
+}
+/*******************  End Survey Module Styles *********************/
